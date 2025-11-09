@@ -20,6 +20,7 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-batch")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.apache.commons:commons-csv:1.14.1")
     runtimeOnly("com.mysql:mysql-connector-j")
 
     compileOnly("org.projectlombok:lombok")
