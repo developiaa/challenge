@@ -83,8 +83,7 @@ public class ProductUploadJobConfiguration {
     public SplitFilePartitioner splitFilePartitioner(
             @Value("#{jobParameters['inputFilePath']}") String path,
             @Value("#{jobParameters['gridSize']}") int gridSize) {
-        SplitFilePartitioner splitFilePartitioner = new SplitFilePartitioner(FileUtils.splitCsv(new File(path), gridSize));
-        return splitFilePartitioner;
+        return new SplitFilePartitioner(FileUtils.splitCsv(new File(path), gridSize));
     }
 
     @Bean
@@ -122,7 +121,6 @@ public class ProductUploadJobConfiguration {
         return Product::from;
     }
 
-
     @Bean
     public JpaItemWriter<Product> productWriter(EntityManagerFactory entityManagerFactory) {
         return new JpaItemWriterBuilder<Product>()
@@ -130,7 +128,6 @@ public class ProductUploadJobConfiguration {
                 .usePersist(true)
                 .build();
     }
-
 
 }
 
