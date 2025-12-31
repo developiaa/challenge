@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="" />
+    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +21,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/_2025_11">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/_2025_12">
       <ProjectState />
     </projectState>
   </component>
@@ -92,6 +98,7 @@
     &quot;Gradle.ProductUploadJobConfigurationTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ReflectionUtilsTest.getFieldNames.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle._2025_11 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.challenge 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -101,6 +108,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.2025_12.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
@@ -129,7 +138,7 @@
       <recent name="study.developia._2025_11.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ProductUploadJobConfigurationTest">
+  <component name="RunManager" selected="Spring Boot.2025_12">
     <configuration name="ApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -202,9 +211,26 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="2025_11" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="challenge._2025_11.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="study.developia._2025_11.Application" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2025_12" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="challenge._2025_12.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="study.developia._2025_12.Application" />
       <extension name="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -223,7 +249,8 @@
       <item itemvalue="Gradle.ProductUploadJobConfigurationTest" />
       <item itemvalue="Gradle.ApplicationTests.contextLoads" />
       <item itemvalue="Gradle.ReflectionUtilsTest.getFieldNames" />
-      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.2025_12" />
+      <item itemvalue="Spring Boot.2025_11" />
     </list>
     <recent_temporary>
       <list>
@@ -256,6 +283,8 @@
       <workItem from="1762085523855" duration="101000" />
       <workItem from="1762085631082" duration="75000" />
       <workItem from="1762085712046" duration="7760000" />
+      <workItem from="1764480974231" duration="7116000" />
+      <workItem from="1764848466985" duration="4040000" />
     </task>
     <servers />
   </component>
