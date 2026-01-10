@@ -7,6 +7,7 @@
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/_2025_12">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/_2026_01">
       <ProjectState />
     </projectState>
   </component>
@@ -80,6 +84,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -93,13 +100,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.'challenge._2025_12.test'에 있는 테스트.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.2025-11 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AsyncExecutorStrategyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest.testExceptionSwallowed.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ProductUploadJobConfigurationTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ReflectionUtilsTest.getFieldNames.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.WithHandlerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithHandlerTest.testExceptionCaught (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithHandlerTest.testExceptionCaught.executor&quot;: &quot;Run&quot;,
     &quot;Gradle._2025_11 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.challenge 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.generated-requests | #1.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -108,7 +124,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.2025_12.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.2025_12.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
@@ -121,8 +137,9 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3275862&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -138,56 +155,18 @@
       <recent name="study.developia._2025_11.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.2025_12">
-    <configuration name="ApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/_2025_11" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":_2025_11:test" />
-            <option value="--tests" />
-            <option value="&quot;study.developia._2025_11.ApplicationTests.contextLoads&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductUploadJobConfigurationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/_2025_11" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":_2025_11:test" />
-            <option value="--tests" />
-            <option value="&quot;study.developia._2025_11.job.product.upload.ProductUploadJobConfigurationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ReflectionUtilsTest.getFieldNames" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.WithHandlerTest.testExceptionCaught (1)">
+    <configuration name="NoHandlerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -198,9 +177,103 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2025_11:test" />
+            <option value=":_2025_12:test" />
             <option value="--tests" />
-            <option value="&quot;study.developia._2025_11.utils.ReflectionUtilsTest.getFieldNames&quot;" />
+            <option value="&quot;study.developia._2025_12.exception.nohandler.NoHandlerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="NoHandlerTest.testExceptionSwallowed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2025_12:test" />
+            <option value="--tests" />
+            <option value="&quot;study.developia._2025_12.exception.nohandler.NoHandlerTest.testExceptionSwallowed&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WithHandlerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2025_12:test" />
+            <option value="--tests" />
+            <option value="&quot;study.developia._2025_12.exception.WithHandlerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WithHandlerTest.testExceptionCaught (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2025_12:test" />
+            <option value="--tests" />
+            <option value="&quot;study.developia._2025_12.exception.handler.WithHandlerTest.testExceptionCaught&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="'challenge._2025_12.test'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2025_12:test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,26 +318,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="challenge._2026_01.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="_2026_01.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Gradle.ProductUploadJobConfigurationTest" />
-      <item itemvalue="Gradle.ApplicationTests.contextLoads" />
-      <item itemvalue="Gradle.ReflectionUtilsTest.getFieldNames" />
+      <item itemvalue="Gradle.'challenge._2025_12.test'에 있는 테스트" />
+      <item itemvalue="Gradle.NoHandlerTest (1)" />
+      <item itemvalue="Gradle.NoHandlerTest.testExceptionSwallowed" />
+      <item itemvalue="Gradle.WithHandlerTest" />
+      <item itemvalue="Gradle.WithHandlerTest.testExceptionCaught (1)" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.2025_12" />
       <item itemvalue="Spring Boot.2025_11" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ProductUploadJobConfigurationTest" />
-        <item itemvalue="Gradle.ReflectionUtilsTest.getFieldNames" />
-        <item itemvalue="Gradle.ApplicationTests.contextLoads" />
+        <item itemvalue="Gradle.WithHandlerTest.testExceptionCaught (1)" />
+        <item itemvalue="Gradle.NoHandlerTest.testExceptionSwallowed" />
+        <item itemvalue="Gradle.'challenge._2025_12.test'에 있는 테스트" />
+        <item itemvalue="Gradle.NoHandlerTest (1)" />
+        <item itemvalue="Gradle.WithHandlerTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.13" />
       </set>
     </attachedChunks>
   </component>
@@ -285,6 +378,11 @@
       <workItem from="1762085712046" duration="7760000" />
       <workItem from="1764480974231" duration="7116000" />
       <workItem from="1764848466985" duration="4040000" />
+      <workItem from="1767148044867" duration="8753000" />
+      <workItem from="1767239309999" duration="4458000" />
+      <workItem from="1767523245761" duration="2590000" />
+      <workItem from="1767840464393" duration="3864000" />
+      <workItem from="1767920802242" duration="2309000" />
     </task>
     <servers />
   </component>
