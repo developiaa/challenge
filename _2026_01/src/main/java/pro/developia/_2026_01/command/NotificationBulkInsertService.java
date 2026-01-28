@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
+// 100만건 데이터 insert
 // 15만건당 6초
 // 총 39초 소요
 @Slf4j
@@ -19,8 +20,8 @@ import java.util.concurrent.ThreadLocalRandom;
 @RequiredArgsConstructor
 public class NotificationBulkInsertService implements CommandLineRunner {
     private final JdbcTemplate jdbcTemplate;
-    private static final int TOTAL_COUNT = 1_000_000;
-    private static final int BATCH_SIZE = 3_000;
+    private static final int TOTAL_COUNT = 10_000_000;
+    private static final int BATCH_SIZE = 30_000;
 
     @Override
     public void run(String... args) {
