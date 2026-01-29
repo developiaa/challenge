@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +79,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/_2025_12" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -98,60 +94,70 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.'challenge._2025_12.test'에 있는 테스트.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.2025-11 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AsyncExecutorStrategyTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.NoHandlerTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.NoHandlerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.NoHandlerTest.testExceptionSwallowed.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductUploadJobConfigurationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReflectionUtilsTest.getFieldNames.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.WithHandlerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WithHandlerTest.testExceptionCaught (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WithHandlerTest.testExceptionCaught.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle._2025_11 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.challenge 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 요청.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.2025_12.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3275862&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.'challenge._2025_12.test'에 있는 테스트.executor": "Run",
+    "Gradle.2025-11 빌드.executor": "Run",
+    "Gradle.ApplicationTests.contextLoads.executor": "Run",
+    "Gradle.AsyncExecutorStrategyTest.executor": "Run",
+    "Gradle.NoHandlerTest (1).executor": "Run",
+    "Gradle.NoHandlerTest.executor": "Run",
+    "Gradle.NoHandlerTest.testExceptionSwallowed.executor": "Run",
+    "Gradle.ProductUploadJobConfigurationTest.executor": "Run",
+    "Gradle.ReflectionUtilsTest.getFieldNames.executor": "Debug",
+    "Gradle.WithHandlerTest.executor": "Run",
+    "Gradle.WithHandlerTest.testExceptionCaught (1).executor": "Run",
+    "Gradle.WithHandlerTest.testExceptionCaught.executor": "Run",
+    "Gradle._2025_11 빌드.executor": "Run",
+    "Gradle.challenge 빌드.executor": "Run",
+    "Gradle.소스 다운로드.executor": "Run",
+    "HTTP 요청.generated-requests | #1.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.2025_12.executor": "Run",
+    "Spring Boot.Application (1).executor": "Run",
+    "Spring Boot.Application.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_01/database",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3275862",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_2026_01/database" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.developia._2026_01.command" />
       <recent name="study.developia._2025_11.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pro.developia._2026_01.domain" />
       <recent name="study.developia._2025_11.utils" />
     </key>
   </component>
@@ -164,8 +170,19 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="Application" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Gradle.WithHandlerTest.testExceptionCaught (1)">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="NoHandlerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -326,7 +343,7 @@
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="_2026_01.main" />
+      <module name="challenge._2026_01.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -383,6 +400,7 @@
       <workItem from="1767523245761" duration="2590000" />
       <workItem from="1767840464393" duration="3864000" />
       <workItem from="1767920802242" duration="2309000" />
+      <workItem from="1768057713300" duration="39254000" />
     </task>
     <servers />
   </component>

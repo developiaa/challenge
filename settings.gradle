@@ -3,3 +3,4 @@ rootProject.name = 'challenge'
 include("_2025_11")
 include("_2025_12")
 include("_2026_01")
+include("_2026_02")
