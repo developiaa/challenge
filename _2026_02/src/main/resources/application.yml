@@ -14,19 +14,19 @@ spring:
 sharding:
   datasources:
     ds-0:
-      url: jdbc:mysql://localhost:3306/shop_db?serverTimezone=UTC&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3308/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
       username: root
-      password: password
+      password: 1234
       driver-class-name: com.mysql.cj.jdbc.Driver
     ds-1:
-      url: jdbc:mysql://localhost:3307/shop_db?serverTimezone=UTC&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3309/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
       username: root
-      password: password
+      password: 1234
       driver-class-name: com.mysql.cj.jdbc.Driver
     ds-2:
-      url: jdbc:mysql://localhost:3308/shop_db?serverTimezone=UTC&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3310/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
       username: root
-      password: password
+      password: 1234
       driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
     maximum-pool-size: 10
