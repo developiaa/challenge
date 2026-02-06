@@ -13,7 +13,6 @@ import pro.developia._2026_02.service.dto.ProductDto;
 public class ProductService {
     private final ProductRepository productRepository;
 
-
     @Transactional
     @Sharding(key = "#productId")
     public ProductDto getProduct(String productId) {
@@ -22,5 +21,12 @@ public class ProductService {
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
         return ProductDto.from(product);
+    }
+
+    @Transactional
+    @Sharding(key = "#product.productId")
+    public String saveProduct(Product product) {
+        productRepository.save(product);
+        return product.getProductId();
     }
 }

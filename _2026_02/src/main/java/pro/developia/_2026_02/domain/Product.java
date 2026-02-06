@@ -2,10 +2,7 @@ package pro.developia._2026_02.domain;
 
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -33,5 +30,22 @@ public class Product {
     private int stockQuantity;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    @Builder
+    public Product(String productId, Long sellerId, String category, String productName,
+                   LocalDate salesStartDate, LocalDate salesEndDate, ProductStatus productStatus,
+                   String brand, String manufacturer, int salesPrice, int stockQuantity) {
+        this.productId = productId;
+        this.sellerId = sellerId;
+        this.category = category;
+        this.productName = productName;
+        this.salesStartDate = salesStartDate;
+        this.salesEndDate = salesEndDate;
+        this.productStatus = productStatus;
+        this.brand = brand;
+        this.manufacturer = manufacturer;
+        this.salesPrice = salesPrice;
+        this.stockQuantity = stockQuantity;
+    }
 }
 
