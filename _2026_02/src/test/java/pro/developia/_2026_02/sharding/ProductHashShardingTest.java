@@ -1,4 +1,4 @@
-package pro.developia._2026_02;
+package pro.developia._2026_02.sharding;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-class ProductShardingTest {
+class ProductHashShardingTest {
     @Autowired
     private ProductService productService;
 

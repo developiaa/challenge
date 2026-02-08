@@ -3,6 +3,8 @@ package pro.developia._2026_02.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -28,7 +30,9 @@ public class Product {
 
     private int salesPrice;
     private int stockQuantity;
+    @Column(insertable = false, updatable = false)
     private LocalDateTime createdAt;
+    @Column(insertable = false)
     private LocalDateTime updatedAt;
 
     @Builder

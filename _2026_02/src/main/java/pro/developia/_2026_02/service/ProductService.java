@@ -13,6 +13,10 @@ import pro.developia._2026_02.service.dto.ProductDto;
 public class ProductService {
     private final ProductRepository productRepository;
 
+    /**
+     * hash sharding
+     */
+
     @Transactional
     @Sharding(key = "#productId")
     public ProductDto getProduct(String productId) {
@@ -26,6 +30,25 @@ public class ProductService {
     @Transactional
     @Sharding(key = "#product.productId")
     public String saveProduct(Product product) {
+        productRepository.save(product);
+        return product.getProductId();
+    }
+
+    /**
+     * range sharding
+     */
+
+    @Transactional(readOnly = true)
+    @Sharding(key = "#sellerId")
+    public ProductDto getProductBySellerId(String productId, Long sellerId) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+        return ProductDto.from(product);
+    }
+
+    @Transactional
+    @Sharding(key = "#product.sellerId")
+    public String saveProductBySellerId(Product product) {
         productRepository.save(product);
         return product.getProductId();
     }
