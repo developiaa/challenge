@@ -11,6 +11,7 @@ import pro.developia._2026_02.repository.ProductRepository;
 import pro.developia._2026_02.service.dto.ProductDto;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -35,6 +36,14 @@ public class ProductService {
         return ProductDto.from(product);
     }
 
+    public void logProduct(String productId) {
+        Optional<Product> product = productRepository.findById(productId);
+
+        product.ifPresentOrElse(
+                p -> log.info("{} exist", p.getProductName()),
+                () -> log.info("not found")
+        );
+    }
 
     /**
      * hash sharding

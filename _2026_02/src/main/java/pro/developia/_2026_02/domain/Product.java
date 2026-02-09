@@ -51,5 +51,9 @@ public class Product {
         this.salesPrice = salesPrice;
         this.stockQuantity = stockQuantity;
     }
+
+    public void updateProductName(String productName) {
+        this.productName = productName;
+    }
 }
 

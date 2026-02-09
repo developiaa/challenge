@@ -6,6 +6,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.system.CapturedOutput;
+import org.springframework.boot.test.system.OutputCaptureExtension;
 import pro.developia._2026_02.domain.Product;
 import pro.developia._2026_02.domain.ProductStatus;
 import pro.developia._2026_02.repository.ProductRepository;
@@ -17,7 +19,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 
-@ExtendWith(MockitoExtension.class)
+@ExtendWith({MockitoExtension.class, OutputCaptureExtension.class})
 class ProductServiceTest {
     @InjectMocks
     ProductService productService;
@@ -74,4 +76,38 @@ class ProductServiceTest {
         assertThat(result.getProductId()).isEqualTo("new" + productId);
     }
 
+    @Test
+    void test3(CapturedOutput output) {
+        String productId = "test";
+        LocalDate now = LocalDate.now();
+        Product product = Product.builder()
+                .productId(productId)
+                .productName("test")
+                .manufacturer("test")
+                .salesPrice(10000)
+                .stockQuantity(100)
+                .brand("test")
+                .salesStartDate(now)
+                .salesEndDate(now.plusMonths(1))
+                .productStatus(ProductStatus.AVAILABLE)
+                .build();
+
+        given(productRepository.findById(productId))
+                .willReturn(Optional.of(product));
+
+        productService.logProduct(productId);
+
+        assertThat(output.getOut()).contains("test exist");
+    }
+
+    @Test
+    void test4(CapturedOutput output) {
+        String productId = "test";
+
+        given(productRepository.findById(productId))
+                .willReturn(Optional.empty());
+
+        productService.logProduct(productId);
+        assertThat(output.getOut()).contains("not found");
+    }
 }
