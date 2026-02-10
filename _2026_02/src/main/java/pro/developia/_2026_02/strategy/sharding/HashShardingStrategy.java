@@ -3,7 +3,7 @@ package pro.developia._2026_02.strategy.sharding;
 import org.springframework.stereotype.Component;
 import pro.developia._2026_02.strategy.ShardingStrategy;
 
-@Component
+@Component("HASH")
 public class HashShardingStrategy implements ShardingStrategy {
     private static final int SHARD_COUNT = 3;
 

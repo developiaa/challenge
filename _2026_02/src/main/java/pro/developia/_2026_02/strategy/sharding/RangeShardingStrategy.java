@@ -1,11 +1,9 @@
 package pro.developia._2026_02.strategy.sharding;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import pro.developia._2026_02.strategy.ShardingStrategy;
 
-@Component
-@Primary
+@Component("RANGE")
 public class RangeShardingStrategy implements ShardingStrategy {
     /**
      * sellerId 범위에 따른 샤딩

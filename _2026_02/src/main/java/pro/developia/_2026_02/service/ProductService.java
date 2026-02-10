@@ -9,6 +9,7 @@ import pro.developia._2026_02.domain.Product;
 import pro.developia._2026_02.domain.ProductStatus;
 import pro.developia._2026_02.repository.ProductRepository;
 import pro.developia._2026_02.service.dto.ProductDto;
+import pro.developia._2026_02.strategy.sharding.ShardingStrategyType;
 
 import java.time.LocalDate;
 import java.util.Optional;
@@ -48,9 +49,8 @@ public class ProductService {
     /**
      * hash sharding
      */
-
     @Transactional
-    @Sharding(key = "#productId")
+    @Sharding(key = "#productId", strategy = ShardingStrategyType.HASH)
     public ProductDto getProduct(String productId) {
         // 이 시점에 이미 ContextHolder에 "ds-N"이 세팅되어 있음.
         // LazyConnectionDataSourceProxy 덕분에 쿼리 실행 직전에 커넥션이 맺어지며 올바른 DB로 감.
@@ -60,7 +60,7 @@ public class ProductService {
     }
 
     @Transactional
-    @Sharding(key = "#product.productId")
+    @Sharding(key = "#product.productId", strategy = ShardingStrategyType.HASH)
     public String saveProduct(Product product) {
         productRepository.save(product);
         return product.getProductId();
@@ -69,9 +69,8 @@ public class ProductService {
     /*
      * range sharding
      */
-
     @Transactional(readOnly = true)
-    @Sharding(key = "#sellerId")
+    @Sharding(key = "#sellerId", strategy = ShardingStrategyType.RANGE)
     public ProductDto getProductBySellerId(String productId, Long sellerId) {
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
@@ -79,7 +78,7 @@ public class ProductService {
     }
 
     @Transactional
-    @Sharding(key = "#product.sellerId")
+    @Sharding(key = "#product.sellerId", strategy = ShardingStrategyType.RANGE)
     public String saveProductBySellerId(Product product) {
         productRepository.save(product);
         return product.getProductId();

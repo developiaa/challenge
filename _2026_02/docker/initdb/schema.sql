@@ -11,8 +11,8 @@ CREATE TABLE products
     manufacturer     VARCHAR(255),
     sales_price      INTEGER      NOT NULL,
     stock_quantity   INTEGER   DEFAULT 0,
-    created_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE INDEX idx_products_status ON products (product_status);

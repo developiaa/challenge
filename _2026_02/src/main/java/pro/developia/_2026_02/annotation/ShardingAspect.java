@@ -14,39 +14,51 @@ import org.springframework.stereotype.Component;
 import pro.developia._2026_02.config.ShardingContextHolder;
 import pro.developia._2026_02.strategy.ShardingStrategy;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 
 @Slf4j
 @Aspect
 @Component
 @Order(1) // 트랜잭션 AOP보다 먼저 실행되어야 함 (LazyProxy 사용 시엔 덜 민감하지만 안전장치)
-@RequiredArgsConstructor
 public class ShardingAspect {
-    private final ShardingStrategy shardingStrategy;
+    private final Map<String, ShardingStrategy> strategyMap;
+    //    private final ShardingStrategy shardingStrategy;
     private final ExpressionParser parser = new SpelExpressionParser();
+
+    public ShardingAspect(List<ShardingStrategy> strategies) {
+        this.strategyMap = strategies.stream()
+                .collect(Collectors.toMap(
+                        s -> s.getClass().getAnnotation(Component.class).value().toUpperCase(),
+                        s -> s
+                ));
+    }
+
 
     @Around("@annotation(sharding)")
     public Object distribute(ProceedingJoinPoint joinPoint, Sharding sharding) throws Throwable {
-        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        String keyExpression = sharding.key(); // 예: "#productId"
+        String strategyKey = sharding.strategy().name(); // HASH or RANGE
+        ShardingStrategy strategy = strategyMap.get(strategyKey);
 
-        // 1. SpEL을 사용하여 파라미터 값 추출
+        if (strategy == null) {
+            throw new IllegalArgumentException("Unknown sharding strategy: " + strategyKey);
+        }
+
+        // SpEL을 사용하여 파라미터 값 추출
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         StandardEvaluationContext context = new StandardEvaluationContext();
         String[] paramNames = signature.getParameterNames();
         Object[] args = joinPoint.getArgs();
-
         for (int i = 0; i < paramNames.length; i++) {
             context.setVariable(paramNames[i], args[i]);
         }
+        Object shardKey = parser.parseExpression(sharding.key()).getValue(context);
 
-        Object shardKey = parser.parseExpression(keyExpression).getValue(context);
-
-        // 전략을 통해 타겟 DB 키 결정
-        String targetDataSourceKey = shardingStrategy.getTargetKey(shardKey);
-
-        // ContextHolder에 저장
-        ShardingContextHolder.setKey(targetDataSourceKey);
-
-        log.info("Sharding Key: {}, Target DB: {}", shardKey, targetDataSourceKey);
+        // 타겟 DB 결정 및 스레드 로컬 설정
+        String targetDb = strategy.getTargetKey(shardKey);
+        ShardingContextHolder.setKey(targetDb);
 
         try {
             return joinPoint.proceed();
