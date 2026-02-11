@@ -8,22 +8,17 @@ import pro.developia._2026_02.domain.Product;
 import pro.developia._2026_02.domain.ProductStatus;
 import pro.developia._2026_02.service.ProductService;
 import pro.developia._2026_02.service.dto.ProductDto;
-import pro.developia._2026_02.strategy.sharding.HashShardingStrategy;
 
 import java.time.LocalDate;
 import java.util.Map;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.setLenientDateParsing;
 
 @SpringBootTest
 class ProductRangeShardingTest {
     @Autowired
     private ProductService productService;
-
-    @Autowired
-    private HashShardingStrategy shardingStrategy;
 
     @Test
     @DisplayName("레인지 샤딩 검증: sellerId 범위에 따라 지정된 DB 노드에 저장되어야 한다")
@@ -53,11 +48,9 @@ class ProductRangeShardingTest {
                     .stockQuantity(100)
                     .build();
 
-            // 1. 저장 실행
             productService.saveProductBySellerId(product);
             System.out.println("Saved: sellerId(" + sellerId + ") -> Target: " + expectedDb);
 
-            // 2. 조회 실행 및 검증
             ProductDto retrieved = productService.getProductBySellerId(productId, sellerId);
             assertThat(retrieved.getProductId()).isEqualTo(productId);
         });
