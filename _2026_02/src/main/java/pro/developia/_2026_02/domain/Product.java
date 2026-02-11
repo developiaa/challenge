@@ -3,8 +3,6 @@ package pro.developia._2026_02.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -50,10 +48,6 @@ public class Product {
         this.manufacturer = manufacturer;
         this.salesPrice = salesPrice;
         this.stockQuantity = stockQuantity;
-    }
-
-    public void updateProductName(String productName) {
-        this.productName = productName;
     }
 }
 

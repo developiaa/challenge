@@ -83,4 +83,29 @@ public class ProductService {
         productRepository.save(product);
         return product.getProductId();
     }
+
+    /**
+     * composite sharding
+     */
+    @Transactional(readOnly = true)
+    @Sharding(key = "{#category, #productId}", strategy = ShardingStrategyType.COMPOSITE)
+    public ProductDto getProductComposite(String category, String productId) {
+        return productRepository.findById(productId)
+                .map(ProductDto::from)
+                .orElseThrow();
+    }
+
+    /**
+     * Category로 DB 그룹(Range)을 결정
+     * 해당 그룹 내에서 ProductId로 해시 분산
+     */
+    @Transactional
+    @Sharding(
+            key = "{#product.category, #product.productId}",
+            strategy = ShardingStrategyType.COMPOSITE
+    )
+    public String saveProductComposite(Product product) {
+        productRepository.save(product);
+        return product.getProductId();
+    }
 }
