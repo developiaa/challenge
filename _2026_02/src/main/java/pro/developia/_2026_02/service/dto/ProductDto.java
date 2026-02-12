@@ -2,6 +2,9 @@ package pro.developia._2026_02.service.dto;
 
 import lombok.*;
 import pro.developia._2026_02.domain.Product;
+import pro.developia._2026_02.domain.ProductStatus;
+
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -12,9 +15,9 @@ public class ProductDto {
     private Long sellerId;
     private String category;
     private String productName;
-    private String salesStartDate;
-    private String salesEndDate;
-    private String productStatus;
+    private LocalDate salesStartDate;
+    private LocalDate salesEndDate;
+    private ProductStatus productStatus;
     private String brand;
     private String manufacturer;
     private int salesPrice;
@@ -22,8 +25,8 @@ public class ProductDto {
 
     public static ProductDto from(Product product) {
         return new ProductDto(product.getProductId(), product.getSellerId(), product.getCategory(),
-                product.getProductName(), product.getSalesStartDate().toString(),
-                product.getSalesEndDate().toString(), product.getProductStatus().toString(),
+                product.getProductName(), product.getSalesStartDate(),
+                product.getSalesEndDate(), product.getProductStatus(),
                 product.getBrand(), product.getManufacturer(), product.getSalesPrice(),
                 product.getStockQuantity());
     }

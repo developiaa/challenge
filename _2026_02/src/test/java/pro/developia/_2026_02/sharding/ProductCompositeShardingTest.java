@@ -10,6 +10,7 @@ import pro.developia._2026_02.config.ShardingContextHolder;
 import pro.developia._2026_02.domain.Product;
 import pro.developia._2026_02.domain.ProductStatus;
 import pro.developia._2026_02.service.ProductService;
+import pro.developia._2026_02.service.dto.ProductDto;
 
 import java.util.List;
 import java.util.UUID;
@@ -19,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class ProductCompositeShardingTest {
     @Autowired
-    ProductService productService;
+    private ProductService productService;
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -94,6 +95,29 @@ public class ProductCompositeShardingTest {
 
         assertThat(resultSum).isEqualTo(sumCount);
         assertThat(resultCount).isEqualTo(count);
+    }
+
+    @Test
+    void test() {
+        // ds-0, ds-1 category : ELECTRONICS, DIGITAL, BOOKS
+        String category = "ELECTRONICS";
+        String pId = UUID.randomUUID().toString();
+        // ELECTRONICS는 ds-0 또는 ds-1로 가야 함
+        productService.saveProductComposite(
+                Product.builder()
+                        .productId(pId)
+                        .category(category) // ds-0 또는 ds-1로 라우팅됨
+                        .productName("MacBook Pro")
+                        .sellerId(100L)
+                        .productStatus(ProductStatus.AVAILABLE)
+                        .salesPrice(3000000)
+                        .stockQuantity(50)
+                        .build()
+        );
+
+        ProductDto productDto = productService.getProductComposite(category, pId);
+        assertThat(productDto.getProductId()).isEqualTo(pId);
+        assertThat(productDto.getCategory()).isEqualTo(category);
     }
 
 

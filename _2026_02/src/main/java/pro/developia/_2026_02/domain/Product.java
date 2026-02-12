@@ -16,7 +16,6 @@ public class Product {
     @Id
     private String productId;
     private Long sellerId;
-
     private String category;
     private String productName;
     private LocalDate salesStartDate;
@@ -25,7 +24,6 @@ public class Product {
     private ProductStatus productStatus;
     private String brand;
     private String manufacturer;
-
     private int salesPrice;
     private int stockQuantity;
     @Column(insertable = false, updatable = false)
