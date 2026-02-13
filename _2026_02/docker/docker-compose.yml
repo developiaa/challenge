@@ -6,29 +6,95 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: products
       TZ: Asia/Seoul
-    command:
-      - --character-set-server=utf8mb4
-      - --collation-server=utf8mb4_unicode_ci
     volumes:
       - ./initdb:/docker-entrypoint-initdb.d # 초기 테이블 생성 SQL 실행
 
   mysql-0:
     <<: *mysql-common
-    container_name: mysql-3306
+    container_name: mysql-3308
     ports:
       - "3308:3306"
+    command:
+      - --server-id=5001 # 노드마다 다르게 설정 (1, 2, 3...)
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --binlog-row-image=FULL
+      - --enforce-gtid-consistency=ON
+      - --gtid-mode=ON
 
   mysql-1:
     <<: *mysql-common
-    container_name: mysql-3307
+    container_name: mysql-3309
     ports:
       - "3309:3306"
+    command:
+      - --server-id=5002
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --binlog-row-image=FULL
+      - --enforce-gtid-consistency=ON
+      - --gtid-mode=ON
 
   mysql-2:
     <<: *mysql-common
-    container_name: mysql-3308
+    container_name: mysql-3310
     ports:
       - "3310:3306"
+    command:
+      - --server-id=5003
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --binlog-row-image=FULL
+      - --enforce-gtid-consistency=ON
+      - --gtid-mode=ON
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.7.7
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      - default
+
+  kafka:
+    image: confluentinc/cp-kafka:7.7.7
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - default
+
+  debezium-connect:
+    image: debezium/connect:2.7.3.Final
+    depends_on:
+      - kafka
+      - mysql-0
+      - mysql-1
+      - mysql-2
+    ports:
+      - "8083:8083"
+    environment:
+      BOOTSTRAP_SERVERS: kafka:29092
+      GROUP_ID: 1
+      CONFIG_STORAGE_TOPIC: my_connect_configs
+      OFFSET_STORAGE_TOPIC: my_connect_offsets
+      STATUS_STORAGE_TOPIC: my_connect_statuses
+      # 내부에서 MySQL 컨테이너 이름으로 접근 가능하도록 설정
+    networks:
+      - default
 
 networks:
   default:

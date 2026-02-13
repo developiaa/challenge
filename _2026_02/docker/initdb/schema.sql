@@ -20,3 +20,8 @@ CREATE INDEX idx_products_category ON products (category);
 CREATE INDEX idx_products_brand ON products (brand);
 CREATE INDEX idx_products_manufacturer ON products (manufacturer);
 CREATE INDEX idx_products_seller_id ON products (seller_id);
+
+-- CDC용 계정 생성
+CREATE USER 'debezium'@'%' IDENTIFIED BY 'dbz';
+GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'debezium'@'%';
+FLUSH PRIVILEGES;
