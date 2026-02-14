@@ -1,6 +1,32 @@
 # 시스템 아키텍처
 이 구조의 핵심은 쓰기(Command)는 MySQL 샤드에 집중하고, 조회(Query)는 고속 검색 엔진에서 수행하여 동기화 지연을 허용하는 최종 일관성(Eventual Consistency) 모델
 
+1. Transaction (Source)
+- 행동: 사용자가 ProductService.saveProductComposite()를 호출합니다.
+- 결과: 샤딩 전략에 따라 ds-0, ds-1, ds-2 중 하나의 MySQL에 데이터가 INSERT/UPDATE 됩니다.
+- 핵심: 애플리케이션은 오직 DB에만 집중합니다. Kafka에 메시지를 보내는 코드는 단 한 줄도 없습니다. (Dual Write 문제 해결)
+
+2. Binlog Recording (MySQL)
+- 행동: MySQL은 커밋된 트랜잭션을 Binary Log (Binlog) 파일에 순차적으로 기록합니다.
+- 핵심: 이 Binlog가 바로 "진실의 원천(Source of Truth)"이자 변경 이력서입니다.
+
+
+3. Capture & Stream (Debezium)
+- 행동: Debezium 커넥터(inventory-connector-X)는 MySQL에 **"노예 서버(Slave replica)"**인 척 위장하고 접속합니다.
+- 과정: MySQL은 "새로운 슬레이브가 왔네?" 하고 Binlog 스트림을 Debezium에게 쏴줍니다.
+- 변환: Debezium은 이 바이너리 데이터를 해석해서 JSON 포맷(before, after 구조)으로 바꾼 뒤, 지정된 Kafka Topic(shard0...)으로 쏘아 보냅니다.
+- 현재 상태: 여기까지 완료되었습니다! Kafka에 데이터가 쌓여 있습니다.
+
+4. Consume & Indexing
+- 행동: Spring Boot Consumer가 Kafka 토픽 3개를 구독(shard*.products)합니다.
+- 로직: 메시지가 오면 after 데이터를 꺼내서 Elasticsearch에 upsert(없으면 입력, 있으면 수정) 합니다.
+- 결과: 사용자는 "상품명 검색" 요청을 MySQL이 아닌 Elasticsearch로 날려서, 샤드 상관없이 0.1초 만에 결과를 얻습니다.
+
+💡 왜 이 구조를 썼는가?
+- 결합도 제거 (Decoupling): 비즈니스 로직에 kafkaTemplate.send()가 섞여 있으면, Kafka 장애 시 트랜잭션 롤백 여부가 애매해집니다. 이 구조는 DB 트랜잭션과 메시지 발행을 완벽히 분리합니다.
+- 데이터 유실 제로 (Zero Data Loss): 애플리케이션 레벨에서 이벤트를 쏘다가 서버가 죽으면 이벤트가 유실될 수 있습니다. 하지만 Binlog는 DB가 커밋했다면 무조건 존재하므로, Debezium이 언제든 다시 읽어서 복구할 수 있습니다.
+- 최종 일관성 (Eventual Consistency): 샤딩된 DB 환경에서 "전체 조회(Global Query)"는 불가능에 가깝습니다. 약간의 딜레이(수백 ms)를 감수하고 조회 전용 DB(Elasticsearch)를 구축하는 것이 대규모 시스템의 정석입니다.
+
 # Debezium을 이용한 실시간 CDC(Change Data Capture) 구축 가이드
 - Debezium은 MySQL의 Binlog를 읽어서 작동합니다. 현재 실행 중인 MySQL 컨테이너들이 Binlog를 ROW 포맷으로 기록하도록 설정해야 합니다.
 - initdb/setup.sql 또는 각 DB에 접속하여 실행: CDC 전용 계정을 생성하고 권한을 부여합니다.
