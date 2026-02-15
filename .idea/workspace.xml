@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="" />
+    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/_2026_02/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_02/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_02/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_02/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,9 @@
     <projectState path="$PROJECT_DIR$/_2026_01">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/_2026_02">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -43,24 +49,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="challenge" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="challenge" type="f1a62948:ProjectNode" />
-                <item name="_2025_11" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="challenge" type="f1a62948:ProjectNode" />
-                <item name="_2025_11" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="challenge" type="f1a62948:ProjectNode" />
-                <item name="_2025_11" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -71,6 +59,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
@@ -79,7 +69,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/_2025_12" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -96,14 +86,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker: Compose 배포.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.'challenge._2025_12.test'에 있는 테스트.executor": "Run",
+    "Gradle.'challenge._2026_02.test'에 있는 테스트.executor": "Run",
     "Gradle.2025-11 빌드.executor": "Run",
     "Gradle.ApplicationTests.contextLoads.executor": "Run",
     "Gradle.AsyncExecutorStrategyTest.executor": "Run",
     "Gradle.NoHandlerTest (1).executor": "Run",
     "Gradle.NoHandlerTest.executor": "Run",
     "Gradle.NoHandlerTest.testExceptionSwallowed.executor": "Run",
+    "Gradle.ProductCompositeShardingTest.executor": "Run",
+    "Gradle.ProductCompositeShardingTest.test.executor": "Run",
+    "Gradle.ProductCompositeShardingTest.verifyAllNodesUsed.executor": "Run",
+    "Gradle.ProductHashShardingTest.executor": "Run",
+    "Gradle.ProductHashShardingTest.verifyShardingDistribution.executor": "Run",
+    "Gradle.ProductRangeShardingTest.executor": "Run",
+    "Gradle.ProductRangeShardingTest.verifyRangeSharding.executor": "Run",
+    "Gradle.ProductServiceTest.executor": "Run",
+    "Gradle.ProductServiceTest.test3.executor": "Run",
+    "Gradle.ProductServiceTest.test4.executor": "Run",
+    "Gradle.ProductShardingTest.executor": "Run",
+    "Gradle.ProductShardingTest.verifyShardingDistribution (1).executor": "Run",
+    "Gradle.ProductShardingTest.verifyShardingDistribution.executor": "Run",
     "Gradle.ProductUploadJobConfigurationTest.executor": "Run",
     "Gradle.ReflectionUtilsTest.getFieldNames.executor": "Debug",
     "Gradle.WithHandlerTest.executor": "Run",
@@ -124,14 +129,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.2025_12.executor": "Run",
+    "Spring Boot.2026_02.executor": "Debug",
     "Spring Boot.Application (1).executor": "Run",
+    "Spring Boot.Application (2).executor": "Debug",
     "Spring Boot.Application.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_01/database",
+    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_02/sql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,18 +149,24 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3275862",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_2026_02/sql" />
+      <recent name="$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/domain" />
       <recent name="$PROJECT_DIR$/_2026_01/database" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_2026_02/docker/initdb" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.developia._2026_02.service" />
       <recent name="pro.developia._2026_01.command" />
       <recent name="study.developia._2025_11.utils" />
     </key>
@@ -175,6 +189,7 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="2026_02" value="STOPPED" />
               <entry key="Application" value="STOPPED" />
             </map>
           </value>
@@ -182,8 +197,8 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="NoHandlerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.'challenge._2026_02.test'에 있는 테스트">
+    <configuration name="ProductCompositeShardingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,9 +209,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2025_12:test" />
+            <option value=":_2026_02:test" />
             <option value="--tests" />
-            <option value="&quot;study.developia._2025_12.exception.nohandler.NoHandlerTest&quot;" />
+            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,7 +222,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NoHandlerTest.testExceptionSwallowed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ProductCompositeShardingTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,9 +233,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2025_12:test" />
+            <option value=":_2026_02:test" />
             <option value="--tests" />
-            <option value="&quot;study.developia._2025_12.exception.nohandler.NoHandlerTest.testExceptionSwallowed&quot;" />
+            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest.test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -231,7 +246,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WithHandlerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ProductCompositeShardingTest.verifyAllNodesUsed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -242,9 +257,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2025_12:test" />
+            <option value=":_2026_02:test" />
             <option value="--tests" />
-            <option value="&quot;study.developia._2025_12.exception.WithHandlerTest&quot;" />
+            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest.verifyAllNodesUsed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -255,7 +270,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WithHandlerTest.testExceptionCaught (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="'challenge._2026_02.test'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -266,31 +281,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2025_12:test" />
-            <option value="--tests" />
-            <option value="&quot;study.developia._2025_12.exception.handler.WithHandlerTest.testExceptionCaught&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="'challenge._2025_12.test'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":_2025_12:test" />
+            <option value=":_2026_02:test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -335,6 +326,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="2026_02" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="challenge._2026_02.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_02.Application" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="challenge._2026_01.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
@@ -349,12 +357,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker: Compose 배포" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="_2026_02/docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Gradle.'challenge._2025_12.test'에 있는 테스트" />
-      <item itemvalue="Gradle.NoHandlerTest (1)" />
-      <item itemvalue="Gradle.NoHandlerTest.testExceptionSwallowed" />
-      <item itemvalue="Gradle.WithHandlerTest" />
-      <item itemvalue="Gradle.WithHandlerTest.testExceptionCaught (1)" />
+      <item itemvalue="Docker.docker: Compose 배포" />
+      <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
+      <item itemvalue="Gradle.ProductCompositeShardingTest" />
+      <item itemvalue="Gradle.ProductCompositeShardingTest.test" />
+      <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
+      <item itemvalue="Spring Boot.2026_02" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.2025_12" />
@@ -362,11 +383,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WithHandlerTest.testExceptionCaught (1)" />
-        <item itemvalue="Gradle.NoHandlerTest.testExceptionSwallowed" />
-        <item itemvalue="Gradle.'challenge._2025_12.test'에 있는 테스트" />
-        <item itemvalue="Gradle.NoHandlerTest (1)" />
-        <item itemvalue="Gradle.WithHandlerTest" />
+        <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
+        <item itemvalue="Docker.docker: Compose 배포" />
+        <item itemvalue="Gradle.ProductCompositeShardingTest" />
+        <item itemvalue="Gradle.ProductCompositeShardingTest.test" />
+        <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
       </list>
     </recent_temporary>
   </component>
@@ -400,7 +421,7 @@
       <workItem from="1767523245761" duration="2590000" />
       <workItem from="1767840464393" duration="3864000" />
       <workItem from="1767920802242" duration="2309000" />
-      <workItem from="1768057713300" duration="39254000" />
+      <workItem from="1768057713300" duration="76848000" />
     </task>
     <servers />
   </component>
@@ -417,6 +438,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/config/DataSourceConfig.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/config/DataSourceConfig.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

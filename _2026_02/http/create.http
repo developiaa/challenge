@@ -1,0 +1,17 @@
+###
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "sellerId": 12345,
+  "category": "ELECTRONICS",
+  "productName": "MacBook Pro 16 M3 Max",
+  "salesStartDate": "2024-03-01",
+  "salesEndDate": "2024-12-31",
+  "productStatus": "AVAILABLE",
+  "brand": "Apple",
+  "manufacturer": "Apple Inc.",
+  "salesPrice": 4890000,
+  "stockQuantity": 50
+}
+

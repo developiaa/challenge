@@ -10,7 +10,18 @@ spring:
         format_sql: true
         show_sql: false
 
-# ??? ?? ??
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: product-search-indexer-group # 컨슈머 그룹 ID (중요)
+      auto-offset-reset: earliest # 처음 붙었을 때 옛날 데이터부터 다 읽기
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        # JSON 파싱 에러 등으로 처리에 실패해도 컨슈머가 죽지 않도록 설정 (선택사항)
+        spring.json.trusted.packages: "*"
+
+
 sharding:
   datasources:
     ds-0:
