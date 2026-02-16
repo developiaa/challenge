@@ -92,7 +92,9 @@ services:
       CONFIG_STORAGE_TOPIC: my_connect_configs
       OFFSET_STORAGE_TOPIC: my_connect_offsets
       STATUS_STORAGE_TOPIC: my_connect_statuses
-      # 내부에서 MySQL 컨테이너 이름으로 접근 가능하도록 설정
+      # JSON 사이즈 최적화를 위해 스키마 정보 제외
+#      CONNECT_VALUE_CONVERTER_SCHEMAS_ENABLE: "false"
+#      CONNECT_KEY_CONVERTER_SCHEMAS_ENABLE: "false"
     networks:
       - default
 

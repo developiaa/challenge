@@ -32,6 +32,34 @@
 - initdb/setup.sql 또는 각 DB에 접속하여 실행: CDC 전용 계정을 생성하고 권한을 부여합니다.
 
 
+# Debezium 설정
+Debezium(Kafka Connect)은 기본적으로 메시지에 **데이터의 스키마 정보(Schema)**를 포함해서 보냅니다.
+- value.converter.schemas.enable=true (기본값)
+```json
+{
+  "schema": { ... },   // 스키마 정보 (필드 타입 등)
+  "payload": {         // 실제 데이터
+    "before": { ... },
+    "after": { ... },
+    "source": { ... },
+    "op": "c"
+  }
+}
+```
+
+- value.converter.schemas.enable=false (실무 권장)
+```json
+{
+  "before": { ... },
+  "after": { ... },
+  "source": { ... },
+  "op": "c"
+}
+```
+
+- SMT (구조 변경 옵션) 사용 여부
+만약 Debezium 커넥터 설정에 ExtractNewRecordState 같은 SMT를 적용했다면, 복잡한 before, op, source를 다 날리고 순수하게 after 데이터만 평평하게(Flatten) 보냅니다.
+
 
 # docker 실행 후 샤드 등록
 - mysql 컨테이너마다 등록해주어야함

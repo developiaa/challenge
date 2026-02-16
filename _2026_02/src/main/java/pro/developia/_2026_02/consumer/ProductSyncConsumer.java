@@ -27,12 +27,24 @@ public class ProductSyncConsumer {
      */
     @KafkaListener(topicPattern = "shard.*\\.products\\.products")
     public void listen(
-            @Payload String message,
+            // Tombstone 메시지 허용 - key는 있으나 value가 없음
+            @Payload(required = false) String message,
             @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
             @Header(KafkaHeaders.RECEIVED_PARTITION) int partition,
             @Header(KafkaHeaders.OFFSET) long offset
     ) {
         try {
+            /**
+             * Debezium의 DELETE 동작 방식과 Spring Kafka의 @Payload 기본 검증이 충돌
+             * 행 삭제시 Debezium이 kafka에 2개의 메시지를 연속으로 보냄
+             * - 첫번째는 삭제되었다는 사실과 삭제된 데이터 전달
+             * - 두번째는 key는 있으나 value가 null(payload가 없음) - kafka의 log compaction 기능이 이 key를 디스크에서 삭제하도록 알리는 신호
+             */
+            if (message == null) {
+                log.info("Tombstone message received (Key deletion signal). Skipping. Topic: {}, Offset: {}", topic, offset);
+                return;
+            }
+
             // 1. JSON 파싱
             DebeziumEventDto<ProductPayloadDto> event = objectMapper.readValue(
                     message,
