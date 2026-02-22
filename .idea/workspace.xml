@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/_2026_02/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_02/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_02/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_02/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,7 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -117,7 +117,9 @@
     "Gradle._2025_11 빌드.executor": "Run",
     "Gradle.challenge 빌드.executor": "Run",
     "Gradle.소스 다운로드.executor": "Run",
+    "HTTP 요청.create | #1.executor": "Run",
     "HTTP 요청.generated-requests | #1.executor": "Run",
+    "HTTP 요청.generated-requests | #2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -186,6 +188,14 @@
     </option>
     <option name="configurationStatuses">
       <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="create | #1" value="STOPPED" />
+              <entry key="generated-requests | #2" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
@@ -197,55 +207,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.'challenge._2026_02.test'에 있는 테스트">
-    <configuration name="ProductCompositeShardingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":_2026_02:test" />
-            <option value="--tests" />
-            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductCompositeShardingTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":_2026_02:test" />
-            <option value="--tests" />
-            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest.test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.2026_02">
     <configuration name="ProductCompositeShardingTest.verifyAllNodesUsed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -290,6 +252,12 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="create | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_2026_02/http/create.http" executionIdentifier="#1" runType="단일 요청 실행">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#2" index="2" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
     <configuration name="2025_11" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -358,7 +326,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker: Compose 배포" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -372,9 +342,9 @@
     <list>
       <item itemvalue="Docker.docker: Compose 배포" />
       <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
-      <item itemvalue="Gradle.ProductCompositeShardingTest" />
-      <item itemvalue="Gradle.ProductCompositeShardingTest.test" />
       <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
+      <item itemvalue="HTTP 요청.create | #1" />
+      <item itemvalue="HTTP 요청.generated-requests | #2" />
       <item itemvalue="Spring Boot.2026_02" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
@@ -383,11 +353,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 요청.create | #1" />
+        <item itemvalue="HTTP 요청.generated-requests | #2" />
+        <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
         <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
         <item itemvalue="Docker.docker: Compose 배포" />
-        <item itemvalue="Gradle.ProductCompositeShardingTest" />
-        <item itemvalue="Gradle.ProductCompositeShardingTest.test" />
-        <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
       </list>
     </recent_temporary>
   </component>
@@ -422,6 +392,7 @@
       <workItem from="1767840464393" duration="3864000" />
       <workItem from="1767920802242" duration="2309000" />
       <workItem from="1768057713300" duration="76848000" />
+      <workItem from="1771225132221" duration="10404000" />
     </task>
     <servers />
   </component>
@@ -438,22 +409,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/config/DataSourceConfig.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/config/DataSourceConfig.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
