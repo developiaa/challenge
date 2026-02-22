@@ -33,7 +33,17 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
 
-    implementation("org.apache.shardingsphere:shardingsphere-jdbc-core:5.4.1")
+    // Artifact 이름 변경 (shardingsphere-jdbc-core -> shardingsphere-jdbc)
+    // Maven Central에 없는 유령 의존성(test-util) 강제 제외
+    implementation("org.apache.shardingsphere:shardingsphere-jdbc:5.5.0") {
+        exclude(group = "org.apache.shardingsphere", module = "shardingsphere-test-util")
+    }
+    // ShardingSphere(Guava)의 전이 의존성 버전 누락 버그 해결
+    implementation("com.google.j2objc:j2objc-annotations:2.8")
+
+    // Java 11+ 환경에서 ShardingSphere 구동을 위한 JAXB 의존성
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
+    implementation("org.glassfish.jaxb:jaxb-runtime:2.3.8")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")

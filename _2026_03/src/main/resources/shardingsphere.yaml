@@ -1,0 +1,43 @@
+# 실제 물리 DB 접속 정보
+dataSources:
+  ds_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3308/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  ds_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3309/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  ds_2:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3310/products?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+
+# 샤딩 룰 세팅
+rules:
+  - !SHARDING
+    tables:
+      products:
+        # ds_0, ds_1, ds_2 의 products 테이블 매핑 (표현식 주의: ${})
+        actualDataNodes: ds_${0..2}.products
+        databaseStrategy:
+          standard:
+            shardingColumn: seller_id
+            shardingAlgorithmName: seller_inline
+
+    # 샤딩 알고리즘
+    shardingAlgorithms:
+      seller_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_${seller_id % 3}
+
+# 콘솔에 실제 라우팅되는 SQL 출력 (디버깅용)
+props:
+  sql-show: true

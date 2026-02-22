@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/test/java/pro/developia/_2026_03/ApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +32,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/_2026_02">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/_2026_03">
       <ProjectState />
     </projectState>
   </component>
@@ -61,8 +67,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,10 +117,13 @@
     "Gradle.ProductShardingTest.verifyShardingDistribution.executor": "Run",
     "Gradle.ProductUploadJobConfigurationTest.executor": "Run",
     "Gradle.ReflectionUtilsTest.getFieldNames.executor": "Debug",
+    "Gradle.ShardingSphereIntegrationTest.executor": "Run",
+    "Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic.executor": "Debug",
     "Gradle.WithHandlerTest.executor": "Run",
     "Gradle.WithHandlerTest.testExceptionCaught (1).executor": "Run",
     "Gradle.WithHandlerTest.testExceptionCaught.executor": "Run",
     "Gradle._2025_11 빌드.executor": "Run",
+    "Gradle._2026_03 빌드.executor": "Run",
     "Gradle.challenge 빌드.executor": "Run",
     "Gradle.소스 다운로드.executor": "Run",
     "HTTP 요청.create | #1.executor": "Run",
@@ -135,7 +144,7 @@
     "Spring Boot.2025_12.executor": "Run",
     "Spring Boot.2026_02.executor": "Debug",
     "Spring Boot.Application (1).executor": "Run",
-    "Spring Boot.Application (2).executor": "Debug",
+    "Spring Boot.Application (2).executor": "Run",
     "Spring Boot.Application.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -173,6 +182,7 @@
       <recent name="study.developia._2025_11.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pro.developia._2026_03.domain" />
       <recent name="pro.developia._2026_01.domain" />
       <recent name="study.developia._2025_11.utils" />
     </key>
@@ -200,14 +210,14 @@
           <value>
             <map>
               <entry key="2026_02" value="STOPPED" />
-              <entry key="Application" value="STOPPED" />
+              <entry key="2026_03" value="FAILED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.2026_02">
+  <component name="RunManager" selected="Gradle.ShardingSphereIntegrationTest">
     <configuration name="ProductCompositeShardingTest.verifyAllNodesUsed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -232,7 +242,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="'challenge._2026_02.test'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ShardingSphereIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -243,7 +253,33 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2026_02:test" />
+            <option value=":_2026_03:test" />
+            <option value="--tests" />
+            <option value="&quot;pro.developia._2026_03.ShardingSphereIntegrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ShardingSphereIntegrationTest.testShardingSphereMagic" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2026_03:test" />
+            <option value="--tests" />
+            <option value="&quot;pro.developia._2026_03.ShardingSphereIntegrationTest.testShardingSphereMagic&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -311,9 +347,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="challenge._2026_01.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
+    <configuration name="2026_03" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="challenge._2026_03.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_03.Application" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -331,33 +377,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker: Compose 배포" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="_2026_02/docker/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker: Compose 배포" />
-      <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
+      <item itemvalue="Gradle.ShardingSphereIntegrationTest" />
+      <item itemvalue="Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic" />
       <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
       <item itemvalue="HTTP 요청.create | #1" />
       <item itemvalue="HTTP 요청.generated-requests | #2" />
-      <item itemvalue="Spring Boot.2026_02" />
       <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Spring Boot.Application (1)" />
+      <item itemvalue="Spring Boot.2026_03" />
+      <item itemvalue="Spring Boot.2026_02" />
       <item itemvalue="Spring Boot.2025_12" />
       <item itemvalue="Spring Boot.2025_11" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ShardingSphereIntegrationTest" />
+        <item itemvalue="Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic" />
         <item itemvalue="HTTP 요청.create | #1" />
         <item itemvalue="HTTP 요청.generated-requests | #2" />
         <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
-        <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
-        <item itemvalue="Docker.docker: Compose 배포" />
       </list>
     </recent_temporary>
   </component>
@@ -392,7 +430,8 @@
       <workItem from="1767840464393" duration="3864000" />
       <workItem from="1767920802242" duration="2309000" />
       <workItem from="1768057713300" duration="76848000" />
-      <workItem from="1771225132221" duration="10404000" />
+      <workItem from="1771225132221" duration="14021000" />
+      <workItem from="1771738632584" duration="317000" />
     </task>
     <servers />
   </component>
