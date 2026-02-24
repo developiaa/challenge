@@ -1,4 +1,4 @@
-package pro.developia._2026_03.domain;
+package pro.developia._2026_03.domain.product;
 
 public enum ProductStatus {
     AVAILABLE("판매 중"),

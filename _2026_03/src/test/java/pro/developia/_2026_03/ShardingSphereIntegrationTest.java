@@ -9,9 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.system.CapturedOutput;
 import org.springframework.boot.test.system.OutputCaptureExtension;
 import org.springframework.test.context.ActiveProfiles;
-import pro.developia._2026_03.domain.Product;
-import pro.developia._2026_03.domain.ProductRepository;
-import pro.developia._2026_03.domain.ProductStatus;
+import pro.developia._2026_03.domain.product.Product;
+import pro.developia._2026_03.domain.product.ProductRepository;
+import pro.developia._2026_03.domain.product.ProductStatus;
 
 import java.time.LocalDate;
 import java.util.UUID;

@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03/src/test/java/pro/developia/_2026_03/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/ProductStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/src/main/java/pro/developia/_2026_03/domain/product/ProductStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/main/resources/shardingsphere.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/src/main/resources/shardingsphere.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03/src/test/java/pro/developia/_2026_03/ShardingSphereIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03/src/test/java/pro/developia/_2026_03/ShardingSphereIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +66,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="HTTP Request" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -99,6 +101,8 @@
     "Gradle.2025-11 빌드.executor": "Run",
     "Gradle.ApplicationTests.contextLoads.executor": "Run",
     "Gradle.AsyncExecutorStrategyTest.executor": "Run",
+    "Gradle.JoinRoutingTest.executor": "Run",
+    "Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable.executor": "Run",
     "Gradle.NoHandlerTest (1).executor": "Run",
     "Gradle.NoHandlerTest.executor": "Run",
     "Gradle.NoHandlerTest.testExceptionSwallowed.executor": "Run",
@@ -118,7 +122,11 @@
     "Gradle.ProductUploadJobConfigurationTest.executor": "Run",
     "Gradle.ReflectionUtilsTest.getFieldNames.executor": "Debug",
     "Gradle.ShardingSphereIntegrationTest.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic.executor": "Debug",
+    "Gradle.ShardingSphereIntegrationTest.testInsertWithoutShardingKeyThrowsException.executor": "Run",
+    "Gradle.ShardingSphereIntegrationTest.testSelectRouting.executor": "Run",
+    "Gradle.ShardingSphereIntegrationTest.testSelectRoutingWithCapture.executor": "Run",
+    "Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic.executor": "Run",
+    "Gradle.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture.executor": "Run",
     "Gradle.WithHandlerTest.executor": "Run",
     "Gradle.WithHandlerTest.testExceptionCaught (1).executor": "Run",
     "Gradle.WithHandlerTest.testExceptionCaught.executor": "Run",
@@ -198,14 +206,6 @@
     </option>
     <option name="configurationStatuses">
       <map>
-        <entry key="HttpClient.HttpRequestRunConfigurationType">
-          <value>
-            <map>
-              <entry key="create | #1" value="STOPPED" />
-              <entry key="generated-requests | #2" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
@@ -218,7 +218,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.ShardingSphereIntegrationTest">
-    <configuration name="ProductCompositeShardingTest.verifyAllNodesUsed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JoinRoutingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -229,9 +229,33 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":_2026_02:test" />
+            <option value=":_2026_03:test" />
             <option value="--tests" />
-            <option value="&quot;pro.developia._2026_02.sharding.ProductCompositeShardingTest.verifyAllNodesUsed&quot;" />
+            <option value="&quot;pro.developia._2026_03.JoinRoutingTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JoinRoutingTest.testCrossShardJoinWithBindingTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2026_03:test" />
+            <option value="--tests" />
+            <option value="&quot;pro.developia._2026_03.JoinRoutingTest.testCrossShardJoinWithBindingTable&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -266,7 +290,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ShardingSphereIntegrationTest.testShardingSphereMagic" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ShardingSphereIntegrationTest.testUpdateRoutingWithCapture" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -279,7 +303,7 @@
           <list>
             <option value=":_2026_03:test" />
             <option value="--tests" />
-            <option value="&quot;pro.developia._2026_03.ShardingSphereIntegrationTest.testShardingSphereMagic&quot;" />
+            <option value="&quot;pro.developia._2026_03.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -290,10 +314,26 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="create | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_2026_02/http/create.http" executionIdentifier="#1" runType="단일 요청 실행">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#2" index="2" runType="단일 요청 실행">
+    <configuration name="'challenge._2026_02.test'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":_2026_02:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="2025_11" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -378,11 +418,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
+      <item itemvalue="Gradle.JoinRoutingTest" />
+      <item itemvalue="Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable" />
+      <item itemvalue="Gradle.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture" />
       <item itemvalue="Gradle.ShardingSphereIntegrationTest" />
-      <item itemvalue="Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic" />
-      <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
-      <item itemvalue="HTTP 요청.create | #1" />
-      <item itemvalue="HTTP 요청.generated-requests | #2" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.2026_03" />
       <item itemvalue="Spring Boot.2026_02" />
@@ -392,10 +432,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ShardingSphereIntegrationTest" />
-        <item itemvalue="Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic" />
-        <item itemvalue="HTTP 요청.create | #1" />
-        <item itemvalue="HTTP 요청.generated-requests | #2" />
-        <item itemvalue="Gradle.ProductCompositeShardingTest.verifyAllNodesUsed" />
+        <item itemvalue="Gradle.'challenge._2026_02.test'에 있는 테스트" />
+        <item itemvalue="Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable" />
+        <item itemvalue="Gradle.JoinRoutingTest" />
+        <item itemvalue="Gradle.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +471,7 @@
       <workItem from="1767920802242" duration="2309000" />
       <workItem from="1768057713300" duration="76848000" />
       <workItem from="1771225132221" duration="14021000" />
-      <workItem from="1771738632584" duration="317000" />
+      <workItem from="1771738632584" duration="4460000" />
     </task>
     <servers />
   </component>

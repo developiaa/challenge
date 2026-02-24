@@ -1,4 +1,4 @@
-package pro.developia._2026_03.domain;
+package pro.developia._2026_03.domain.product;
 
 import jakarta.persistence.*;
 import lombok.*;
