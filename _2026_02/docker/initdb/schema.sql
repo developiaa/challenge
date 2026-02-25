@@ -25,3 +25,32 @@ CREATE INDEX idx_products_seller_id ON products (seller_id);
 CREATE USER 'debezium'@'%' IDENTIFIED BY 'dbz';
 GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'debezium'@'%';
 FLUSH PRIVILEGES;
+
+-- 2026_03 모듈에서 사용
+-- 유저 테이블
+CREATE TABLE users
+(
+    user_id  BIGINT NOT NULL,
+    username VARCHAR(255),
+    PRIMARY KEY (user_id)
+);
+
+-- 게시글 테이블 (user_id 추가)
+CREATE TABLE articles
+(
+    article_id BIGINT NOT NULL,
+    user_id    BIGINT NOT NULL, -- 샤딩 키로 사용될 외래키 성격의 컬럼
+    title      VARCHAR(255),
+    content    TEXT,
+    PRIMARY KEY (article_id)
+);
+
+-- 댓글 테이블 (user_id 추가)
+CREATE TABLE comments
+(
+    comment_id BIGINT NOT NULL,
+    article_id BIGINT,
+    user_id    BIGINT NOT NULL, -- 샤딩 키로 사용될 외래키 성격의 컬럼
+    content    VARCHAR(255),
+    PRIMARY KEY (comment_id)
+);
