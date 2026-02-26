@@ -46,10 +46,27 @@ rules:
             shardingColumn: order_id
             shardingAlgorithmName: order_inline
 
+      # 고객 테이블
+      users:
+        actualDataNodes: ds_${0..2}.users
+        databaseStrategy:
+          standard:
+            shardingColumn: user_id  # 기준: user_id
+            shardingAlgorithmName: user_inline
+
+      # 기사 테이블
+      articles:
+        actualDataNodes: ds_${0..2}.articles
+        databaseStrategy:
+          standard:
+            shardingColumn: user_id  # 기준: user_id
+            shardingAlgorithmName: user_inline
+
     # 바인딩 테이블 선언
     # 엔진에게 "이 두 테이블은 조인될 때 데카르트 곱(Cartesian Product)을 하지 마!" 라고 알려줍니다.
     bindingTables:
-      - orders, order_items
+      - "orders, order_items"
+      - "users, articles"
 
     # 샤딩 알고리즘
     shardingAlgorithms:
@@ -62,6 +79,10 @@ rules:
         type: INLINE
         props:
           algorithm-expression: ds_${order_id % 3}
+      user_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_${user_id % 3}
 
 # 콘솔에 실제 라우팅되는 SQL 출력 (디버깅용)
 props:
