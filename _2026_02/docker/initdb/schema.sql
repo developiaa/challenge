@@ -10,9 +10,9 @@ CREATE TABLE products
     brand            VARCHAR(255),
     manufacturer     VARCHAR(255),
     sales_price      INTEGER      NOT NULL,
-    stock_quantity   INTEGER   DEFAULT 0,
-    created_at       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    stock_quantity   INTEGER               DEFAULT 0,
+    created_at       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE INDEX idx_products_status ON products (product_status);
@@ -53,4 +53,35 @@ CREATE TABLE comments
     user_id    BIGINT NOT NULL, -- 샤딩 키로 사용될 외래키 성격의 컬럼
     content    VARCHAR(255),
     PRIMARY KEY (comment_id)
+);
+
+
+-- 0번 테이블
+CREATE TABLE boards_0
+(
+    board_id BIGINT NOT NULL,
+    user_id  BIGINT NOT NULL, -- 작성자 ID (하지만 샤딩 키로는 안 쓸 겁니다!)
+    title    VARCHAR(255),
+    content  TEXT,
+    PRIMARY KEY (board_id)
+);
+
+-- 1번 테이블
+CREATE TABLE boards_1
+(
+    board_id BIGINT NOT NULL,
+    user_id  BIGINT NOT NULL,
+    title    VARCHAR(255),
+    content  TEXT,
+    PRIMARY KEY (board_id)
+);
+
+-- 2번 테이블
+CREATE TABLE boards_2
+(
+    board_id BIGINT NOT NULL,
+    user_id  BIGINT NOT NULL,
+    title    VARCHAR(255),
+    content  TEXT,
+    PRIMARY KEY (board_id)
 );
