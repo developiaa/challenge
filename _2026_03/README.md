@@ -9,3 +9,8 @@
     - SELECT, UPDATE, DELETE
 - JoinRoutingTest
   - 크로스 샤드 JOIN FETCH 테스트
+- UserCentricColocationTest
+  - 테넌트 기반 샤딩 테스트
+    - user_id를 기반으로 article이 같은 샤드로 insert
+- HotspotResolutionTest
+  - 2차원 혼합 샤딩(DB + table)
