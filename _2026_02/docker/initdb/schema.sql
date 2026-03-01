@@ -85,3 +85,12 @@ CREATE TABLE boards_2
     content  TEXT,
     PRIMARY KEY (board_id)
 );
+
+-- 3개의 샤드에 추가
+CREATE TABLE board_user_mappings
+(
+    mapping_id BIGINT NOT NULL,
+    user_id    BIGINT NOT NULL, -- 샤딩 키
+    board_id   BIGINT NOT NULL, -- 목적지 타겟 키
+    PRIMARY KEY (mapping_id)
+);

@@ -79,6 +79,14 @@ rules:
             shardingColumn: board_id
             shardingAlgorithmName: board_table_inline
 
+      # 게시판-유저 매핑 테이블
+      board_user_mappings:
+        actualDataNodes: ds_${0..2}.board_user_mappings
+        databaseStrategy:
+          standard:
+            shardingColumn: user_id  # 기준: user_id (ds_0 ~ 2로 분산)
+            shardingAlgorithmName: user_inline
+
     # 바인딩 테이블 선언
     # 엔진에게 "이 두 테이블은 조인될 때 데카르트 곱(Cartesian Product)을 하지 마!" 라고 알려줍니다.
     bindingTables:

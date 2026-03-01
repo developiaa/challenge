@@ -14,3 +14,5 @@
     - user_id를 기반으로 article이 같은 샤드로 insert
 - HotspotResolutionTest
   - 2차원 혼합 샤딩(DB + table)
+- SafePaginationTest
+  - 2차원 혼합 샤딩으로 insert된 데이터 조회
