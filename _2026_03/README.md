@@ -15,4 +15,4 @@
 - HotspotResolutionTest
   - 2차원 혼합 샤딩(DB + table)
 - SafePaginationTest
-  - 2차원 혼합 샤딩으로 insert된 데이터 조회
+  - 혼합 샤딩으로 insert된 데이터 조회
