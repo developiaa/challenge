@@ -1,0 +1,13 @@
+package pro.developia._2026_03_02.controller
+
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+import pro.developia._2026_03_02.service.OrderService
+
+@RestController
+@RequestMapping("/api/v1/orders")
+class OrderController(
+    private val orderService : OrderService
+) {
+
+}
