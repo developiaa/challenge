@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="" />
+    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/OrderRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/controller/OrderController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/controller/OrderController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/service/OrderService.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +76,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/_2026_03" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14" />
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -85,94 +91,94 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker: Compose 배포.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.'challenge._2025_12.test'에 있는 테스트.executor": "Run",
-    "Gradle.'challenge._2026_02.test'에 있는 테스트.executor": "Run",
-    "Gradle.'challenge._2026_03.test'에 있는 테스트.executor": "Run",
-    "Gradle.'pro.developia._2026_03'에 있는 테스트.executor": "Run",
-    "Gradle.2025-11 빌드.executor": "Run",
-    "Gradle.ApplicationTests.contextLoads.executor": "Run",
-    "Gradle.AsyncExecutorStrategyTest.executor": "Run",
-    "Gradle.HotspotResolutionTest.testTableAndDatabaseComplexSharding.executor": "Run",
-    "Gradle.JoinRoutingTest.executor": "Run",
-    "Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable.executor": "Run",
-    "Gradle.JoinRoutingTest.testSelectRoutingWithCapture.executor": "Run",
-    "Gradle.NoHandlerTest (1).executor": "Run",
-    "Gradle.NoHandlerTest.executor": "Run",
-    "Gradle.NoHandlerTest.testExceptionSwallowed.executor": "Run",
-    "Gradle.ProductCompositeShardingTest.executor": "Run",
-    "Gradle.ProductCompositeShardingTest.test.executor": "Run",
-    "Gradle.ProductCompositeShardingTest.verifyAllNodesUsed.executor": "Run",
-    "Gradle.ProductHashShardingTest.executor": "Run",
-    "Gradle.ProductHashShardingTest.verifyShardingDistribution.executor": "Run",
-    "Gradle.ProductRangeShardingTest.executor": "Run",
-    "Gradle.ProductRangeShardingTest.verifyRangeSharding.executor": "Run",
-    "Gradle.ProductServiceTest.executor": "Run",
-    "Gradle.ProductServiceTest.test3.executor": "Run",
-    "Gradle.ProductServiceTest.test4.executor": "Run",
-    "Gradle.ProductShardingTest.executor": "Run",
-    "Gradle.ProductShardingTest.verifyShardingDistribution (1).executor": "Run",
-    "Gradle.ProductShardingTest.verifyShardingDistribution.executor": "Run",
-    "Gradle.ProductUploadJobConfigurationTest.executor": "Run",
-    "Gradle.ReflectionUtilsTest.getFieldNames.executor": "Debug",
-    "Gradle.SafePaginationTest.executor": "Run",
-    "Gradle.SafePaginationTest.testMappingTablePagination.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testInsertWithoutShardingKeyThrowsException.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testSelectRouting.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testSelectRoutingWithCapture.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic.executor": "Run",
-    "Gradle.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture.executor": "Run",
-    "Gradle.UserCentricColocationTest.executor": "Run",
-    "Gradle.UserCentricColocationTest.testUserCentricJoin.executor": "Run",
-    "Gradle.WithHandlerTest.executor": "Run",
-    "Gradle.WithHandlerTest.testExceptionCaught (1).executor": "Run",
-    "Gradle.WithHandlerTest.testExceptionCaught.executor": "Run",
-    "Gradle._2025_11 빌드.executor": "Run",
-    "Gradle._2026_03 빌드.executor": "Run",
-    "Gradle.challenge 빌드.executor": "Run",
-    "Gradle.소스 다운로드.executor": "Run",
-    "HTTP 요청.create | #1.executor": "Run",
-    "HTTP 요청.generated-requests | #1.executor": "Run",
-    "HTTP 요청.generated-requests | #2.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.2025_12.executor": "Run",
-    "Spring Boot.2026_02.executor": "Debug",
-    "Spring Boot.Application (1).executor": "Run",
-    "Spring Boot.Application (2).executor": "Run",
-    "Spring Boot.Application.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_02/sql",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3275862",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker: Compose 배포.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.'challenge._2025_12.test'에 있는 테스트.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.'challenge._2026_02.test'에 있는 테스트.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.'challenge._2026_03.test'에 있는 테스트.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.'pro.developia._2026_03'에 있는 테스트.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.2025-11 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AsyncExecutorStrategyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HotspotResolutionTest.testTableAndDatabaseComplexSharding.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JoinRoutingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JoinRoutingTest.testSelectRoutingWithCapture.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NoHandlerTest.testExceptionSwallowed.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductCompositeShardingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductCompositeShardingTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductCompositeShardingTest.verifyAllNodesUsed.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductHashShardingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductHashShardingTest.verifyShardingDistribution.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductRangeShardingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductRangeShardingTest.verifyRangeSharding.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductServiceTest.test3.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductServiceTest.test4.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductShardingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductShardingTest.verifyShardingDistribution (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductShardingTest.verifyShardingDistribution.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProductUploadJobConfigurationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReflectionUtilsTest.getFieldNames.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.SafePaginationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SafePaginationTest.testMappingTablePagination.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.testInsertWithoutShardingKeyThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.testSelectRouting.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.testSelectRoutingWithCapture.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.testShardingSphereMagic.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShardingSphereIntegrationTest.testUpdateRoutingWithCapture.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserCentricColocationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserCentricColocationTest.testUserCentricJoin.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithHandlerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithHandlerTest.testExceptionCaught (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithHandlerTest.testExceptionCaught.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle._2025_11 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle._2026_03 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.challenge 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.create | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.generated-requests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.2025_12.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.2026_02.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Application (2).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kj/dev/study/challenge/_2026_02/sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3275862&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_2026_02/sql" />
@@ -405,6 +411,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="challenge._2026_03_02.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_03_02.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="challenge._2026_01.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_01.Application" />
@@ -424,6 +437,7 @@
       <item itemvalue="Gradle.SafePaginationTest" />
       <item itemvalue="Gradle.SafePaginationTest.testMappingTablePagination" />
       <item itemvalue="Gradle.JoinRoutingTest.testCrossShardJoinWithBindingTable" />
+      <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.2026_03" />
       <item itemvalue="Spring Boot.2026_02" />
@@ -474,6 +488,7 @@
       <workItem from="1771225132221" duration="14021000" />
       <workItem from="1771738632584" duration="4460000" />
       <workItem from="1771798381028" duration="23921000" />
+      <workItem from="1773011050806" duration="321000" />
     </task>
     <servers />
   </component>
