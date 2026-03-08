@@ -5,8 +5,8 @@ import pro.developia._2026_03_02.domain.OrderStatus
 import java.time.LocalDateTime
 
 data class OrderCreateRequest(
-    val userId: String,
-    val productId: String,
+    val userId: Long,
+    val productId: Long,
 )
 
 data class OrderResponse(

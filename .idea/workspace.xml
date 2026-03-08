@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/OrderRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/controller/OrderController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/controller/OrderController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_02/src/main/kotlin/pro/developia/_2026_03_02/service/OrderService.kt" afterDir="false" />
-    </list>
+    <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -488,7 +482,7 @@
       <workItem from="1771225132221" duration="14021000" />
       <workItem from="1771738632584" duration="4460000" />
       <workItem from="1771798381028" duration="23921000" />
-      <workItem from="1773011050806" duration="321000" />
+      <workItem from="1773011050806" duration="636000" />
     </task>
     <servers />
   </component>
