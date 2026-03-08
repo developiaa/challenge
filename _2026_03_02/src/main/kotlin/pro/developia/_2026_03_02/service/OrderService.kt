@@ -29,4 +29,12 @@ class OrderService(
         return orderRepository.save(order)
             .toResponse()
     }
+
+    @Transactional(rollbackFor = [Exception::class])
+    fun cancelOrder(id: Long): OrderResponse {
+        val order = orderRepository.findByIdOrNull(id)
+            ?: throw IllegalArgumentException("Order not found")
+        order.cancel()
+        return order.toResponse()
+    }
 }
