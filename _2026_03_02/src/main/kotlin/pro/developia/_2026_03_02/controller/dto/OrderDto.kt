@@ -17,6 +17,11 @@ data class OrderResponse(
     val createdAt: LocalDateTime,
 )
 
+data class OrderCheckoutRequest(
+    val shippingAddress: String,
+    val couponCode: String? = null,
+)
+
 fun Order.toResponse() = OrderResponse(
     id = this.id ?: throw IllegalArgumentException("Order id is null"),
     userId = this.userId,
