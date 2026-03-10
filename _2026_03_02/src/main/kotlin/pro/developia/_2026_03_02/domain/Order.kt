@@ -11,6 +11,10 @@ import java.time.LocalDateTime
 @Entity
 @Table(name = "orders")
 class Order(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long? = null,
+
     @Column(nullable = false)
     val userId: Long,
 
@@ -20,10 +24,6 @@ class Order(
     @Column(nullable = false)
     var status: OrderStatus = OrderStatus.PENDING,
 ) {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
-
     @Column(nullable = false, updatable = false)
     val createdAt: LocalDateTime = LocalDateTime.now()
 

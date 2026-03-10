@@ -34,6 +34,12 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    // MockK: Kotlin 전용 Mocking 라이브러리 (Mockito 대체)
+    testImplementation("io.mockk:mockk:1.13.10")
+
+    // Kotest Assertions: Kotlin 특화 검증 라이브러리 (AssertJ 대체)
+    testImplementation("io.kotest:kotest-assertions-core:5.8.1")
 }
 
 kotlin {

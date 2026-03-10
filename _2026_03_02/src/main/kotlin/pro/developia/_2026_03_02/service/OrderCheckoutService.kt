@@ -39,7 +39,7 @@ class OrderCheckoutService(
         // with: 특정 객체의 컨텍스트 안에서 여러 프로퍼티를 조합하여 새로운 객체 생성
         return with(processedOrder) {
             OrderResponse(
-                id = id!!, // this.id에서 this 생략 가능
+                id = requireNotNull(id) { "Entity ID must not be null" },
                 userId = userId,
                 productId = productId,
                 status = status,
