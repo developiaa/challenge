@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_03/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_03/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_03_03/src/test/kotlin/pro/developia/_2026_03_03/OrderCheckoutServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_03/src/test/kotlin/pro/developia/_2026_03_03/OrderCheckoutServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +68,11 @@
         <option value="JUnit5 Test Class" />
         <option value="HTTP Request" />
         <option value="Interface" />
-        <option value="Kotlin JUnit5 Test Class" />
         <option value="Class" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -204,6 +202,7 @@
       <recent name="$PROJECT_DIR$/_2026_02/docker/initdb" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.developia._2026_03_03" />
       <recent name="pro.developia._2026_03_02.service" />
       <recent name="pro.developia._2026_02.service" />
       <recent name="pro.developia._2026_01.command" />
@@ -511,7 +510,7 @@
       <workItem from="1771738632584" duration="4460000" />
       <workItem from="1771798381028" duration="23921000" />
       <workItem from="1773011050806" duration="15774000" />
-      <workItem from="1774303004480" duration="656000" />
+      <workItem from="1774303004480" duration="1029000" />
     </task>
     <servers />
   </component>
