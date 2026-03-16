@@ -30,6 +30,16 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
+    // Coroutines Test: runTest 등을 제공하여 비동기 코드를 동기적으로 테스트하게 해줌
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
+
+    // MockK & Kotest
+    testImplementation("io.mockk:mockk:1.13.10")
+    testImplementation("io.kotest:kotest-assertions-core:5.8.1")
+
+    // WebFlux End-to-End 테스트용 클라이언트
+    testImplementation("io.projectreactor:reactor-test")
+
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
