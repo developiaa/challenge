@@ -40,6 +40,9 @@ dependencies {
     // WebFlux End-to-End 테스트용 클라이언트
     testImplementation("io.projectreactor:reactor-test")
 
+    // H2 R2DBC 드라이버 (테스트 전용)
+    testImplementation("io.r2dbc:r2dbc-h2")
+
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
