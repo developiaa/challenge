@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_03/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_03/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_03_03/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_03_03/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
+    "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3275862",
     "run.configurations.included.in.services": "true",
@@ -466,17 +463,17 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.OrderCheckoutServiceTest.결제 대기 상태의 주문에 대해 체크아웃을 성공적으로 처리한다 (1)" />
-      <item itemvalue="Gradle.OrderControllerTest" />
-      <item itemvalue="Gradle.OrderCheckoutServiceTest" />
       <item itemvalue="Gradle.OrderCheckoutServiceTest.결제 대기 상태의 주문에 대해 체크아웃을 성공적으로 처리한다" />
+      <item itemvalue="Gradle.OrderCheckoutServiceTest" />
+      <item itemvalue="Gradle.OrderControllerTest" />
       <item itemvalue="Gradle.SafePaginationTest" />
-      <item itemvalue="Spring Boot.Application (1)" />
+      <item itemvalue="Spring Boot.2025_11" />
+      <item itemvalue="Spring Boot.2025_12" />
+      <item itemvalue="Spring Boot.2026_02" />
+      <item itemvalue="Spring Boot.2026_03" />
       <item itemvalue="Spring Boot.2026_03_03" />
       <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Spring Boot.2026_03" />
-      <item itemvalue="Spring Boot.2026_02" />
-      <item itemvalue="Spring Boot.2025_12" />
-      <item itemvalue="Spring Boot.2025_11" />
+      <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -492,7 +489,6 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.13" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.13" />
       </set>
     </attachedChunks>
   </component>
@@ -523,7 +519,8 @@
       <workItem from="1771738632584" duration="4460000" />
       <workItem from="1771798381028" duration="23921000" />
       <workItem from="1773011050806" duration="15774000" />
-      <workItem from="1774303004480" duration="3636000" />
+      <workItem from="1774303004480" duration="5512000" />
+      <workItem from="1774392337240" duration="5575000" />
     </task>
     <servers />
   </component>
