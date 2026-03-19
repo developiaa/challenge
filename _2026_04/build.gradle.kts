@@ -10,8 +10,9 @@ group = "pro.developia"
 version = "1.0.0"
 description = "_2026_04"
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
+// java toolchain 대신 사용
+kotlin {
+    jvmToolchain(21)
 }
 
 repositories {
