@@ -17,6 +17,7 @@ class PlccCardIssueService(
     suspend fun issuePlccCard(userId: Long) = coroutineScope {
 
         // 1. 요청 진입
+        log.info("====================")
         log.info("[Step 1] 파이프라인 시작 | Thread: ${Thread.currentThread().name}")
 
         // 1. 멱등성 검증 및 분산 락 (Redis)
@@ -39,7 +40,7 @@ class PlccCardIssueService(
             val extResponse = cardClient.requestCardIssue(userId)
             log.info("[Step 4] 외부 API 응답 수신 | Thread: ${Thread.currentThread().name} | code: ${extResponse.resultCode}")
             // 4. 결과에 따른 후속 처리 (Tx 2 열림 -> 업데이트 -> Tx 2 닫힘)
-            var completedIssue =
+            val completedIssue =
                 if (extResponse.resultCode == "0000") {
                     store.completeIssue(issueId, IssueStatus.SUCCESS)
                     // KafkaEventPublisher.publish("card-issued", extResponse.cardNo)

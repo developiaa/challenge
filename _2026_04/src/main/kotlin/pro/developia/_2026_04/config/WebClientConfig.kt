@@ -25,7 +25,7 @@ class WebClientConfig {
             }
 
         return builder
-            .baseUrl("https://api.card-company.com/v1")
+            .baseUrl("http://api.card-company.com/v1")
             .clientConnector(ReactorClientHttpConnector(httpClient))
             .build()
     }

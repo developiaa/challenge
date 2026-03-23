@@ -1,3 +1,4 @@
+USE card;
 CREATE TABLE card_issues
 (
     id         BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '발급 이력 고유 ID',
