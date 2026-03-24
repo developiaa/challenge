@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController
 import pro.developia._2026_04.service.PlccCardIssueService
 
 @RestController
-@RequestMapping("/api/v1/plcc-cards")
+@RequestMapping("/api/plcc-cards")
 class PlccCardIssueController(
     private val issueService: PlccCardIssueService
 ) {
-    @PostMapping("/issue")
+    @PostMapping("/v1/issue")
     @ResponseStatus(HttpStatus.OK)
     suspend fun issue(@RequestBody request: PlccIssueRequest): PlccIssueResponse {
 
@@ -27,14 +27,23 @@ class PlccCardIssueController(
             status = cardIssue.status.name
         )
     }
+
+    @PostMapping("/v2/issue")
+    @ResponseStatus(HttpStatus.OK)
+    suspend fun issueV2(@RequestBody request: PlccIssueRequest) {
+        val cardIssue = issueService.issuePlccCard2(request.userId, request.customerId)
+    }
+
 }
 
 data class PlccIssueRequest(
-    val userId: Long
+    val userId: Long,
+    val customerId: Long?
 )
 
 data class PlccIssueResponse(
     val issueId: Long,
     val userId: Long,
-    val status: String
+    val status: String,
+    val customerId: Long? = null
 )

@@ -1,15 +1,19 @@
 package pro.developia._2026_04.service
 
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
+import pro.developia._2026_04.client.CardClient
 import pro.developia._2026_04.client.CardCompanyClient
 import pro.developia._2026_04.domain.IssueStatus
 
 @Service
 class PlccCardIssueService(
     private val store: PlccCardIssueStore,
-    private val cardClient: CardCompanyClient
+    private val cardCompanyClient: CardCompanyClient,
+    private val cardClient: CardClient
     // private val redisLockManager: RedisLockManager // 동시성 제어용
 ) {
     private val log = LoggerFactory.getLogger(javaClass)
@@ -37,7 +41,7 @@ class PlccCardIssueService(
             // awaitAll(authResult, issueResult) 형태로 구현합니다.
 
             log.info("[Step 3] 외부 API 호출 직전 | Thread: ${Thread.currentThread().name}")
-            val extResponse = cardClient.requestCardIssue(userId)
+            val extResponse = cardCompanyClient.requestCardIssue(userId, 3)
             log.info("[Step 4] 외부 API 응답 수신 | Thread: ${Thread.currentThread().name} | code: ${extResponse.resultCode}")
             // 4. 결과에 따른 후속 처리 (Tx 2 열림 -> 업데이트 -> Tx 2 닫힘)
             val completedIssue =
@@ -55,6 +59,25 @@ class PlccCardIssueService(
             log.error("카드사 통신 중 예외 발생 - issueId: $issueId", e)
 
             // 네트워크 타임아웃, 예외 발생 시 FAIL 처리 (보상 트랜잭션)
+            store.completeIssue(issueId, IssueStatus.FAIL)
+            throw IllegalStateException("카드 발급 중 외부 연동 오류가 발생했습니다.", e)
+        }
+    }
+
+    suspend fun issuePlccCard2(userId: Long, customerId: Long?) = coroutineScope {
+        val pendingHistory = store.savePendingIssue(userId)
+        val issueId = checkNotNull(pendingHistory.userId) { "사전 이력 ID 생성 실패" }
+
+        try {
+            log.info("외부 API 호출 직전 | Thread: ${Thread.currentThread().name}")
+
+            val cardCompanyResult = async { cardCompanyClient.requestCardIssue(userId, 5) }
+            val cardResult = async { cardClient.requestCardIssue(userId, 5) }
+            val extResponses = awaitAll(cardCompanyResult, cardResult)
+            log.info("외부 API 응답 수신 | Thread: ${Thread.currentThread().name} | code: $extResponses")
+
+        } catch (e: Exception) {
+            log.error("카드사 통신 중 예외 발생 - issueId: $issueId", e)
             store.completeIssue(issueId, IssueStatus.FAIL)
             throw IllegalStateException("카드 발급 중 외부 연동 오류가 발생했습니다.", e)
         }

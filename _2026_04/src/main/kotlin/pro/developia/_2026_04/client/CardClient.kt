@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.awaitBody
 
 @Component
-class CardCompanyClient(
+class CardClient(
     private val cardCompanyWebClient: WebClient
 ) {
     private val log = LoggerFactory.getLogger(javaClass)
@@ -34,4 +34,3 @@ class CardCompanyClient(
     }
 }
 
-data class ExternalIssueResponse(val resultCode: String, val cardNo: String?)
