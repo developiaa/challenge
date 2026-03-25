@@ -66,7 +66,7 @@ class PlccCardIssueService(
 
     suspend fun issuePlccCard2(userId: Long, customerId: Long?) = coroutineScope {
         val pendingHistory = store.savePendingIssue(userId)
-        val issueId = checkNotNull(pendingHistory.userId) { "사전 이력 ID 생성 실패" }
+        val issueId = checkNotNull(pendingHistory.id) { "사전 이력 ID 생성 실패" }
 
         try {
             log.info("외부 API 호출 직전 | Thread: ${Thread.currentThread().name}")
@@ -75,6 +75,8 @@ class PlccCardIssueService(
             val cardResult = async { cardClient.requestCardIssue(userId, 5) }
             val extResponses = awaitAll(cardCompanyResult, cardResult)
             log.info("외부 API 응답 수신 | Thread: ${Thread.currentThread().name} | code: $extResponses")
+
+            store.completeIssue(issueId, IssueStatus.SUCCESS)
 
         } catch (e: Exception) {
             log.error("카드사 통신 중 예외 발생 - issueId: $issueId", e)
