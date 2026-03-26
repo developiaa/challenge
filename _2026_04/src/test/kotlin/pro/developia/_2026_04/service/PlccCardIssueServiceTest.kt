@@ -1,5 +1,6 @@
 package pro.developia._2026_04.service
 
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -66,6 +67,44 @@ class PlccCardIssueServiceTest {
 
         coVerify(exactly = 1) { store.savePendingIssue(userId) }
         coVerify(exactly = 1) { store.completeIssue(issueId, IssueStatus.SUCCESS) }
+    }
+
+    @Test
+    fun `하나의 API라도 실패하면 코루틴이 즉시 취소되고 FAIL 상태로 저장된다`() = runTest {
+        // given
+        val userId = 200L
+        val issueId = 2L
+
+        val pendingHistory = CardIssue(id = issueId, userId = userId, status = IssueStatus.PENDING)
+        coEvery { store.savePendingIssue(userId) } returns pendingHistory
+
+        val failHistory = pendingHistory.copy(status = IssueStatus.FAIL)
+        coEvery { store.completeIssue(issueId, IssueStatus.FAIL) } returns failHistory
+
+        // API 1: 3초가 걸림
+        coEvery { cardCompanyClient.requestCardIssue(userId, 5) } coAnswers {
+            delay(3000)
+            ExternalIssueResponse(resultCode = "0000", cardNo = "")
+        }
+        // API 2: 1초 만에 예외 발생 (에러)
+        coEvery { cardClient.requestCardIssue(userId, 5) } coAnswers {
+            delay(1000)
+            throw IllegalStateException("카드 발급 중 외부 연동 오류가 발생했습니다.")
+        }
+
+        // when & then
+        val exception = shouldThrow<IllegalStateException> {
+            service.issuePlccCard2(userId, null)
+        }
+
+        // 검증 1: 예외 메시지 확인
+        exception.message shouldBe "카드 발급 중 외부 연동 오류가 발생했습니다."
+
+        // 검증 2: FAIL 상태로 업데이트 되었는지 확인
+        coVerify(exactly = 1) { store.completeIssue(issueId, IssueStatus.FAIL) }
+
+        // 검증 3: SUCCESS 업데이트는 호출되지 않았는지 확인
+        coVerify(exactly = 0) { store.completeIssue(any(), IssueStatus.SUCCESS) }
     }
 
 }
