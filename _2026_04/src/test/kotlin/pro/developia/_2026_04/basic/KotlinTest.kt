@@ -41,6 +41,10 @@ class KotlinTest {
         showRange(0..9 step 2)// [2]
         showRange(0 until 10 step 3)// [3]
         showRange(9 downTo 2 step 3)
+
+        repeat(3) {
+            showRange(1..2)
+        }
     }
 
     fun showRange(r: IntProgression) {
