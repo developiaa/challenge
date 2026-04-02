@@ -4,7 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/_2026_04" />
         <option name="gradleJvm" value="temurin-23" />
         <option name="modules">
           <set>
@@ -16,38 +16,7 @@
             <option value="$PROJECT_DIR$/_2026_03" />
             <option value="$PROJECT_DIR$/_2026_03_02" />
             <option value="$PROJECT_DIR$/_2026_03_03" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/_2026_03" />
-        <option name="gradleJvm" value="temurin-23" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/_2025_11" />
-            <option value="$PROJECT_DIR$/_2025_12" />
-            <option value="$PROJECT_DIR$/_2026_01" />
-            <option value="$PROJECT_DIR$/_2026_02" />
-            <option value="$PROJECT_DIR$/_2026_03" />
-            <option value="$PROJECT_DIR$/_2026_03_02" />
-            <option value="$PROJECT_DIR$/_2026_03_03" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/_2026_03_03" />
-        <option name="gradleJvm" value="temurin-23" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/_2025_11" />
-            <option value="$PROJECT_DIR$/_2025_12" />
-            <option value="$PROJECT_DIR$/_2026_01" />
-            <option value="$PROJECT_DIR$/_2026_02" />
-            <option value="$PROJECT_DIR$/_2026_03" />
-            <option value="$PROJECT_DIR$/_2026_03_02" />
-            <option value="$PROJECT_DIR$/_2026_03_03" />
+            <option value="$PROJECT_DIR$/_2026_04" />
           </set>
         </option>
       </GradleProjectSettings>
