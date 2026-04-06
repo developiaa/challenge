@@ -17,10 +17,12 @@ import java.time.LocalDateTime
 class ExposedCardIssueRepository {
 
     @Transactional
-    fun createIssue(userId: Long): Long {
+    fun createIssue(userId: Long, amount: Long): Long {
         val insertData = CardIssuesTable.insert {
             it[CardIssuesTable.userId] = userId
-            it[status] = IssueStatus.PENDING.toString()
+            it[status] = IssueStatus.PENDING
+            it[CardIssuesTable.amount] = amount
+            it[CardIssuesTable.transactionAt] = LocalDateTime.now()
             it[createdAt] = LocalDateTime.now()
         }
         return insertData[CardIssuesTable.id]
@@ -33,7 +35,9 @@ class ExposedCardIssueRepository {
                 CardIssue(
                     id = row[CardIssuesTable.id],
                     userId = row[CardIssuesTable.userId],
-                    status = IssueStatus.valueOf(row[CardIssuesTable.status]),
+                    status = row[CardIssuesTable.status],
+                    amount = row[CardIssuesTable.amount],
+                    transactionAt = row[CardIssuesTable.transactionAt],
                     createdAt = row[CardIssuesTable.createdAt],
                 )
             }.singleOrNull()
@@ -41,7 +45,7 @@ class ExposedCardIssueRepository {
 
     fun updateStatus(id: Long, newStatus: IssueStatus): Boolean {
         val updatedRows = CardIssuesTable.update({ CardIssuesTable.id eq id }) {
-            it[status] = newStatus.name
+            it[status] = newStatus
         }
         return updatedRows > 0
     }

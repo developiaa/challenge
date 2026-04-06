@@ -6,5 +6,7 @@ data class CardIssue(
     val id: Long,
     val userId: Long,
     val status: IssueStatus,
+    val amount: Long,
+    val transactionAt: LocalDateTime,
     val createdAt: LocalDateTime
 )
