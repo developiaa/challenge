@@ -1,5 +1,6 @@
-package pro.developia._2026_04_02.domain
+package pro.developia._2026_04_02.domain.issue
 
+import pro.developia._2026_04_02.domain.IssueStatus
 import java.time.LocalDateTime
 
 data class CardIssue(

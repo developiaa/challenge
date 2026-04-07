@@ -7,8 +7,8 @@ import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.update
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
-import pro.developia._2026_04_02.domain.CardIssue
-import pro.developia._2026_04_02.domain.CardIssuesTable
+import pro.developia._2026_04_02.domain.issue.CardIssue
+import pro.developia._2026_04_02.domain.issue.CardIssuesTable
 import pro.developia._2026_04_02.domain.IssueStatus
 import java.time.LocalDateTime
 
