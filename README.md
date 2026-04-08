@@ -11,3 +11,4 @@
 | 2026_03_03 | 코틀린 스터디      | webflux + r2dbc                                       |
 | 2026_04    | 코틀린 스터디      | webflux + r2dbc + 외부 api 연동                           |
 | 2026_04_2  | 코틀린 스터디      | webflux + r2dbc + exposed orm                         |
+| 2026_05    | 부하 테스트       | kotlin + webflux + r2dbc                              |

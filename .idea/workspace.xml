@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/_2026_05/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +274,7 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="2026_05" value="FAILED" />
+              <entry key="2026_05" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -595,7 +592,7 @@
       <workItem from="1775601106871" duration="3871000" />
       <workItem from="1777027171163" duration="4700000" />
       <workItem from="1777241882949" duration="4685000" />
-      <workItem from="1777328836303" duration="1000000" />
+      <workItem from="1777328836303" duration="1331000" />
     </task>
     <servers />
   </component>
