@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/_2026_04_02">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/_2026_05">
       <ProjectState />
     </projectState>
   </component>
@@ -83,15 +88,15 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Enum" />
-        <option value="Kotlin Class" />
         <option value="Kotlin JUnit5 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/_2026_04_02" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14.4-bin/92wwslzcyst3phie3o264zltu/gradle-8.14.4" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="8.14.4" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/_2026_04_02" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.4.1-bin/arn2x92ynaizyzdaamcbpbhtj/gradle-9.4.1" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-23.0.1/Contents/Home" gradleVersion="9.4.1" />
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -191,6 +196,7 @@
     "Spring Boot.2026_04.executor": "Debug",
     "Spring Boot.Application (1).executor": "Run",
     "Spring Boot.Application (2).executor": "Run",
+    "Spring Boot.Application (4).executor": "Debug",
     "Spring Boot.Application.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -243,6 +249,8 @@
       <recent name="pro.developia._2026_04_02.domain" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="pro.developia._2026_04_02.domain.issue" />
+      <recent name="pro.developia._2026_04_02.domain.cardissue" />
       <recent name="pro.developia._2026_04_02.repository" />
       <recent name="pro.developia.basic" />
       <recent name="pro.developia" />
@@ -267,17 +275,14 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="2026_02" value="STOPPED" />
-              <entry key="2026_03" value="FAILED" />
-              <entry key="2026_03_03" value="STOPPED" />
-              <entry key="2026_04" value="FAILED" />
+              <entry key="2026_05" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ExposedCardIssueRepositoryTest">
+  <component name="RunManager" selected="Spring Boot.2026_05">
     <configuration name="ExposedCardIssueRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -478,6 +483,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="2026_05" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="challenge._2026_05.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_05.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="challenge._2026_03_02.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.developia._2026_03_02.Application" />
@@ -518,6 +530,7 @@
       <item itemvalue="Gradle.'challenge._2026_04.test'에 있는 테스트" />
       <item itemvalue="Gradle.KotlinTest.main" />
       <item itemvalue="Gradle.KotlinTest.main (1)" />
+      <item itemvalue="Spring Boot.2026_05" />
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application (3)" />
       <item itemvalue="Spring Boot.2025_11" />
@@ -531,11 +544,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ExposedCardIssueRepositoryTest" />
-        <item itemvalue="Gradle.ExposedCardIssueRepositoryTest.Exposed CRUD가 정상적으로 동작한다" />
-        <item itemvalue="Gradle.KotlinTest.main (1)" />
         <item itemvalue="Gradle.'challenge._2026_04.test'에 있는 테스트" />
         <item itemvalue="Gradle.KotlinTest.main" />
+        <item itemvalue="Gradle.KotlinTest.main (1)" />
+        <item itemvalue="Gradle.ExposedCardIssueRepositoryTest" />
+        <item itemvalue="Gradle.ExposedCardIssueRepositoryTest.Exposed CRUD가 정상적으로 동작한다" />
       </list>
     </recent_temporary>
   </component>
@@ -578,6 +591,9 @@
       <workItem from="1774392337240" duration="26019000" />
       <workItem from="1775555575185" duration="3018000" />
       <workItem from="1775601106871" duration="3871000" />
+      <workItem from="1777027171163" duration="4700000" />
+      <workItem from="1777241882949" duration="4685000" />
+      <workItem from="1777328836303" duration="55000" />
     </task>
     <servers />
   </component>
