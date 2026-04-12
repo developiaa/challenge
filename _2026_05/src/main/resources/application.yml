@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://127.0.0.1:3306/commerce?allowPublicKeyRetrieval=true
+    username: root
+    password: password
+    pool:
+      initial-size: 10
+      max-size: 50
+      max-idle-time: 30m
