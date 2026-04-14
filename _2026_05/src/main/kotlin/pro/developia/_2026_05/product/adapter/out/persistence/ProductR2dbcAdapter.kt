@@ -12,4 +12,8 @@ class ProductR2dbcAdapter(
         val entity = ProductEntity.fromDomain(product)
         return repository.save(entity).toDomain()
     }
+
+    override suspend fun findById(id: Long): Product? {
+        return repository.findById(id)?.toDomain()
+    }
 }

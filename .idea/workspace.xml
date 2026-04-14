@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/out/persistence/ProductR2dbcAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/out/persistence/ProductR2dbcAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/ProductService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/ProductService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/port/in/ManageProductUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/port/in/ManageProductUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/model/Product.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/port/out/ProductPersistencePort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/port/out/ProductPersistencePort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +202,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_04/src/main/kotlin/pro/developia/_2026_04/client",
+    "last_opened_file_path": "/Users/kj/dev/study/challenge/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/in/admin/dto",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -222,11 +226,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/in/admin/dto" />
       <recent name="$PROJECT_DIR$/_2026_04/src/main/kotlin/pro/developia/_2026_04/client" />
       <recent name="$PROJECT_DIR$/_2026_03_03/src/main/kotlin/pro/developia/_2026_03_03" />
       <recent name="$PROJECT_DIR$/_2026_02/sql" />
       <recent name="$PROJECT_DIR$/_2026_02/src/main/java/pro/developia/_2026_02/domain" />
-      <recent name="$PROJECT_DIR$/_2026_01/database" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -242,6 +246,7 @@
       <recent name="pro.developia._2026_03_02.service" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="pro.developia._2026_05.product.adapter.in.admin" />
       <recent name="pro.developia._2026_04_02.domain" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
@@ -589,7 +594,7 @@
       <workItem from="1775601106871" duration="3871000" />
       <workItem from="1777027171163" duration="4700000" />
       <workItem from="1777241882949" duration="4685000" />
-      <workItem from="1777328836303" duration="4833000" />
+      <workItem from="1777328836303" duration="6960000" />
     </task>
     <servers />
   </component>

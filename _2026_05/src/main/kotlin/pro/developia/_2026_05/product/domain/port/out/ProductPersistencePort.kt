@@ -4,6 +4,5 @@ import pro.developia._2026_05.product.domain.model.Product
 
 interface ProductPersistencePort {
     suspend fun save(product: Product): Product
-//    suspend fun findById(id: Long): Product?
-//    suspend fun deleteById(id: Long)
+    suspend fun findById(id: Long): Product?
 }

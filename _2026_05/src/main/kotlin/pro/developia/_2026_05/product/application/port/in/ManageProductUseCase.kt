@@ -6,6 +6,6 @@ import pro.developia._2026_05.product.domain.model.Product
 
 interface ManageProductUseCase {
     suspend fun createProduct(command: CreateProductCommand): Product
-//    suspend fun updateProduct(command: UpdateProductCommand): Product
+    suspend fun updateProduct(command: UpdateProductCommand): Product
 }
 
