@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49eb48f-27e4-4075-a73b-be84805d9968" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/catalog/adapter/out/persistence/CatalogRedisAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/out/persistence/ProductR2dbcAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/adapter/out/persistence/ProductR2dbcAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/ProductService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/ProductService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/port/in/ManageProductUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/application/port/in/ManageProductUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/model/Product.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/port/out/ProductPersistencePort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_2026_05/src/main/kotlin/pro/developia/_2026_05/product/domain/port/out/ProductPersistencePort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +83,7 @@
         <option value="Kotlin JUnit5 Test Class" />
         <option value="Kotlin Enum" />
         <option value="Kotlin File" />
+        <option value="package-info" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
@@ -250,11 +247,11 @@
       <recent name="pro.developia._2026_04_02.domain" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="pro.developia._2026_05.catalog.adapter.out.persistence" />
+      <recent name="pro.developia._2026_05.catalog.adapter.out.persistence.jpa" />
+      <recent name="pro.developia._2026_05.catalog.domain.model" />
       <recent name="pro.developia._2026_05.product.domain.model" />
       <recent name="pro.developia._2026_05.product.application.port.in.command" />
-      <recent name="pro.developia._2026_04_02.domain.issue" />
-      <recent name="pro.developia._2026_04_02.domain.cardissue" />
-      <recent name="pro.developia._2026_04_02.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pro.developia._2026_03.domain" />
@@ -594,7 +591,7 @@
       <workItem from="1775601106871" duration="3871000" />
       <workItem from="1777027171163" duration="4700000" />
       <workItem from="1777241882949" duration="4685000" />
-      <workItem from="1777328836303" duration="6960000" />
+      <workItem from="1777328836303" duration="11826000" />
     </task>
     <servers />
   </component>
