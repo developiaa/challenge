@@ -31,6 +31,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     runtimeOnly("org.mariadb:r2dbc-mariadb:1.4.0")
 
+    // Spring Data Redis (Reactive 지원 포함)
+    // 기본적으로 Lettuce 비동기/논블로킹 드라이버가 내장되어 있습니다.
+    implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
+
+    // Connection Pooling (대용량 트래픽 필수)
+    // Lettuce가 커넥션 풀을 사용하려면 commons-pool2가 반드시 클래스패스에 있어야 합니다.
+    implementation("org.apache.commons:commons-pool2")
+
     // Monitoring (성능 테스트 시 필수)
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
