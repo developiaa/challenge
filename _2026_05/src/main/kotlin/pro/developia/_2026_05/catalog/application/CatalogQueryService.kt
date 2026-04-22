@@ -3,7 +3,7 @@ package pro.developia._2026_05.catalog.application
 import org.springframework.stereotype.Service
 import pro.developia._2026_05.catalog.application.port.`in`.ViewCatalogUseCase
 import pro.developia._2026_05.catalog.domain.model.CatalogItem
-import pro.developia._2026_05.catalog.domain.port.out.CatalogReadPort
+import pro.developia._2026_05.catalog.application.port.out.CatalogReadPort
 
 @Service
 class CatalogQueryService(

@@ -1,4 +1,4 @@
-package pro.developia._2026_05.catalog.domain.port.out
+package pro.developia._2026_05.catalog.application.port.out
 
 import pro.developia._2026_05.catalog.domain.model.CatalogItem
 

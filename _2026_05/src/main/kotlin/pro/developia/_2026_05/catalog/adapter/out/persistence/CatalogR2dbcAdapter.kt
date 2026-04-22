@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.toList
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 import pro.developia._2026_05.catalog.domain.model.CatalogItem
-import pro.developia._2026_05.catalog.domain.port.out.CatalogReadPort
+import pro.developia._2026_05.catalog.application.port.out.CatalogReadPort
 
 @Primary
 @Component
