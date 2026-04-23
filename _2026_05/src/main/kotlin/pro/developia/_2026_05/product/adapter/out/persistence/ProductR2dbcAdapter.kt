@@ -2,7 +2,7 @@ package pro.developia._2026_05.product.adapter.out.persistence
 
 import org.springframework.stereotype.Component
 import pro.developia._2026_05.product.domain.model.Product
-import pro.developia._2026_05.product.domain.port.out.ProductPersistencePort
+import pro.developia._2026_05.product.application.port.out.ProductPersistencePort
 
 @Component
 class ProductR2dbcAdapter(

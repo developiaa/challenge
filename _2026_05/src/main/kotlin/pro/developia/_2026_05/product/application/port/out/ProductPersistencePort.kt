@@ -1,4 +1,4 @@
-package pro.developia._2026_05.product.domain.port.out
+package pro.developia._2026_05.product.application.port.out
 
 import pro.developia._2026_05.product.domain.model.Product
 

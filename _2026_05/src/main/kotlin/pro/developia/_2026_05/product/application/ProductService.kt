@@ -6,7 +6,7 @@ import pro.developia._2026_05.product.application.port.`in`.ManageProductUseCase
 import pro.developia._2026_05.product.application.port.`in`.command.CreateProductCommand
 import pro.developia._2026_05.product.application.port.`in`.command.UpdateProductCommand
 import pro.developia._2026_05.product.domain.model.Product
-import pro.developia._2026_05.product.domain.port.out.ProductPersistencePort
+import pro.developia._2026_05.product.application.port.out.ProductPersistencePort
 
 @Service
 class ProductService(
