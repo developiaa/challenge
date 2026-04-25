@@ -1,6 +1,10 @@
 package pro.developia._2026_05.purchase.adapter.out.persistence
 
+import kotlinx.coroutines.flow.toList
 import org.springframework.stereotype.Component
+import pro.developia._2026_05.purchase.application.port.out.OrderPersistencePort
+import pro.developia._2026_05.purchase.domain.model.Order
+import pro.developia._2026_05.purchase.domain.model.OrderStatus
 
 @Component
 class OrderR2dbcAdapter(
