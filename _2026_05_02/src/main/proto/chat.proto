@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// 패키지 충돌 방지를 위한 namespace 설정
+package chat;
+
+// Java/Kotlin 코드로 생성될 때의 옵션
+option java_multiple_files = true;
+option java_package = "com.example.grpc.chat";
+
+// 1. 웹소켓 서버 -> 로직 서버로 보내는 메시지 (Request)
+message SendMessageRequest {
+  string user_id = 1;
+  string room_id = 2;
+  string content = 3;
+}
+
+// 2. 로직 서버 -> 웹소켓 서버 응답 (Response)
+message SendMessageResponse {
+  bool success = 1;
+  string message_id = 2;
+  int64 timestamp = 3; // 타임스탬프 (epoch millis)
+}
+
+// 3. 서비스 인터페이스 정의
+service ChatLogicService {
+  // 가장 기본적인 단일 요청/응답 (Unary RPC)
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+}
