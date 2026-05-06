@@ -28,6 +28,14 @@ repositories {
     mavenCentral()
 }
 
+
+dependencyManagement {
+    imports {
+        // Spring gRPC 공식 BOM 적용
+        mavenBom("org.springframework.grpc:spring-grpc-dependencies:1.0.3")
+    }
+}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -47,6 +55,9 @@ dependencies {
 
     // Spring Boot 3.x (Jakarta EE) 환경에서 필요한 어노테이션
     compileOnly("jakarta.annotation:jakarta.annotation-api:2.1.1")
+
+    implementation("org.springframework.grpc:spring-grpc-server-spring-boot-starter")
+    implementation("org.springframework.grpc:spring-grpc-client-spring-boot-starter")
 }
 
 // 3. Protobuf 컴파일러 및 플러그인 설정
