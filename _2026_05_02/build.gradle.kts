@@ -14,9 +14,9 @@ version = "0.0.1-SNAPSHOT"
 description = "_2026_05_02"
 
 // gRPC 및 Protobuf 버전 정의
-val grpcVersion = "1.58.0"
+val grpcVersion = "1.75.0"
 val grpcKotlinVersion = "1.4.0"
-val protobufVersion = "3.24.0"
+val protobufVersion = "4.28.2"
 
 java {
     toolchain {
@@ -55,6 +55,12 @@ dependencies {
 
     // Spring Boot 3.x (Jakarta EE) 환경에서 필요한 어노테이션
     compileOnly("jakarta.annotation:jakarta.annotation-api:2.1.1")
+
+    // Kotlin Coroutines Core (delay 등 코루틴 코어 기능)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+
+    // (선택/권장) Spring 환경과의 호환성 및 Reactor 연동을 위한 라이브러리
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     implementation("org.springframework.grpc:spring-grpc-server-spring-boot-starter")
     implementation("org.springframework.grpc:spring-grpc-client-spring-boot-starter")

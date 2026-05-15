@@ -1,0 +1,6 @@
+spring:
+  grpc:
+    client:
+      channels:
+        logic-server:
+          address: static://127.0.0.1:9090

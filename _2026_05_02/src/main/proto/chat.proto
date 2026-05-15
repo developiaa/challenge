@@ -5,7 +5,7 @@ package chat;
 
 // Java/Kotlin 코드로 생성될 때의 옵션
 option java_multiple_files = true;
-option java_package = "com.example.grpc.chat";
+option java_package = "pro.developia.grpc.chat";
 
 // 1. 웹소켓 서버 -> 로직 서버로 보내는 메시지 (Request)
 message SendMessageRequest {
