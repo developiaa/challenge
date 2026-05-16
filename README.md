@@ -13,3 +13,4 @@
 | 2026_04_2  | 코틀린 스터디      | webflux + r2dbc + exposed orm                         |
 | 2026_05    | 부하 테스트       | kotlin + webflux + r2dbc                              |
 | 2026_05_02 | grpc 스터디     | kotlin + grpc (추후 테스트 필요)                             |
+| 2026_06    | 코틀린 스터디      | 코틀린 활용                                                |
