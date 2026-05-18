@@ -1,4 +1,4 @@
-package pro.developia._2026_06.mock
+package pro.developia._2026_06.mock.test1
 
 import org.springframework.stereotype.Repository
 import java.math.BigDecimal
