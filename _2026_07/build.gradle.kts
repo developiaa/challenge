@@ -22,8 +22,15 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+    // 코루틴 핵심. 버전은 Spring Boot dependency-management(kotlinx-coroutines 모듈 관리)에 위임.
+    // 만약 빌드가 "version required"로 실패하면 kotlinx-coroutines-bom을 platform()으로 명시하거나
+    // 두 아티팩트에 동일 버전을 핀 고정하면 됨(-core 와 -test 버전은 항상 일치시킬 것).
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
