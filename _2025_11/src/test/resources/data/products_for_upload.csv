@@ -1,0 +1,7 @@
+sellerId,category,productName,salesStartDate,salesEndDate,productStatus,brand,manufacturer,salesPrice,stockQuantity
+93,가구,레고,2023-06-11,2024-10-23,OUT_OF_STOCK,맥도날드,롯데제과,375970,393
+61,가구,소설,2022-11-05,2024-05-23,DISCONTINUED,스타벅스,아모레퍼시픽,197097,840
+42,가구,축구공,2023-07-14,2026-03-08,DISCONTINUED,아모레퍼시픽,삼성전자,467954,772
+73,식품,햇반,2022-02-21,2025-01-14,OUT_OF_STOCK,BMW,현대자동차,26621,818
+59,가구,스킨케어 세트,2023-06-12,2024-10-07,AVAILABLE,아모레퍼시픽,스타벅스코리아,73259,244
+89,화장품,소파,2023-07-25,2025-05-28,AVAILABLE,LG,스타벅스코리아,262029,266

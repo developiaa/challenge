@@ -27,9 +27,15 @@ class MockEventSource(
     private val maxEvents: Long? = null,
     private val failAtSequence: Long? = null,
     private val valueRange: ClosedRange<Double> = 0.0..100.0,
+    /** 연결 핸드셰이크 지연 시뮬레이션. 상위의 connectTimeout 보다 크면 연결 타임아웃으로 제외된다. */
+    private val connectDelayMillis: Long = 0,
     private val seed: Int = id.hashCode(),
     private val clock: Clock = Clock.systemUTC(),
 ) : EventSource {
+
+    override suspend fun connect() {
+        if (connectDelayMillis > 0) delay(connectDelayMillis)
+    }
 
     override suspend fun stream(sink: SendChannel<RawEvent>) {
         val random = Random(seed)
