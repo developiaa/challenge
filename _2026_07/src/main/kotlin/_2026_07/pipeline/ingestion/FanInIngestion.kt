@@ -1,5 +1,6 @@
 package _2026_07.pipeline.ingestion
 
+import _2026_07.observability.TraceId
 import _2026_07.pipeline.EventSource
 import _2026_07.pipeline.IngestionStrategy
 import _2026_07.pipeline.model.RawEvent
@@ -32,7 +33,9 @@ class FanInIngestion(
             try {
                 supervisorScope {
                     sources.forEach { source ->
-                        launch(CoroutineName("source-${source.id}")) {
+                        // 소스별 traceId 를 컨텍스트에 심어, 이 소스에서 나온 로그가 자동 태깅되게 한다.
+                        launch(CoroutineName("source-${source.id}") + TraceId.random("src-${source.id}")) {
+                            log.info("소스 수집 시작")
                             try {
                                 source.stream(channel)
                             } catch (e: CancellationException) {

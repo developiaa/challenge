@@ -1,10 +1,12 @@
 package _2026_07.demo
 
+import _2026_07.observability.TraceId
 import _2026_07.pipeline.Pipeline
 import _2026_07.pipeline.alerting.LoggingAlertSink
 import _2026_07.pipeline.processing.AnomalyDetectingProcessor
 import _2026_07.pipeline.source.MockEventSource
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlin.time.Duration.Companion.seconds
 
@@ -28,8 +30,11 @@ fun main() = runBlocking {
     )
 
     println("standalone 파이프라인 3초 실행...")
-    withTimeoutOrNull(3.seconds) {
-        pipeline.run()
+    // 파이프라인 전체를 하나의 traceId 로 감싼다. 소스 코루틴은 각자 자신의 traceId 로 덮어쓴다.
+    withContext(TraceId.random("pipeline")) {
+        withTimeoutOrNull(3.seconds) {
+            pipeline.run()
+        }
     }
     println("종료 — 취소가 모든 소스 코루틴을 정리함")
 }

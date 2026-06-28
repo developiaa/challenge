@@ -44,4 +44,20 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+// 3주차 backpressure 벤치마크 실행:  ./gradlew benchmark
+tasks.register<JavaExec>("benchmark") {
+    group = "application"
+    description = "backpressure 전략별 처리량/지연/드롭 측정"
+    mainClass.set("_2026_07.benchmark.BackpressureBenchmarkKt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+// Spring 없이 순수 코루틴 파이프라인 데모:  ./gradlew standaloneDemo
+tasks.register<JavaExec>("standaloneDemo") {
+    group = "application"
+    description = "프레임워크 독립 파이프라인 데모(traceId 로그 포함)"
+    mainClass.set("_2026_07.demo.StandaloneDemoKt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
 tasks.register("prepareKotlinBuildScriptModel") {}

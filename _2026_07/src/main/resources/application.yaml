@@ -1,3 +1,9 @@
 spring:
   application:
     name: _2026_07
+
+# 콘솔 로그에 traceId(MDC) 를 포함. TraceId(ThreadContextElement)가 심은 값이
+# 디스패처 전환과 무관하게 %X{traceId} 로 출력된다. 값이 없으면 '-' 로 표기.
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level [traceId=%X{traceId:-none}] [%thread] %logger{28} - %msg%n"

@@ -1,5 +1,6 @@
 package _2026_07.pipeline.ingestion
 
+import _2026_07.observability.TraceId
 import _2026_07.pipeline.EventSource
 import _2026_07.pipeline.IngestionStrategy
 import _2026_07.pipeline.model.RawEvent
@@ -10,6 +11,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ReceiveChannel
+import kotlinx.coroutines.channels.onClosed
+import kotlinx.coroutines.channels.onSuccess
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.selects.onTimeout
 import kotlinx.coroutines.selects.select
@@ -52,8 +55,10 @@ class SelectingIngestion(
         val producers = scope.launch(CoroutineName("selecting-producers")) {
             supervisorScope {
                 perSource.forEach { (source, chan) ->
-                    launch(CoroutineName("source-${source.id}")) {
+                    // 소스별 traceId — 연결/스트리밍 로그가 디스패처 전환과 무관하게 태깅된다.
+                    launch(CoroutineName("source-${source.id}") + TraceId.random("src-${source.id}")) {
                         try {
+                            log.info("소스 연결 시도")
                             withTimeout(connectTimeoutMillis) { source.connect() }
                             source.stream(chan)
                         } catch (e: TimeoutCancellationException) {
