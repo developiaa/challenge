@@ -60,4 +60,21 @@ tasks.register<JavaExec>("standaloneDemo") {
     classpath = sourceSets["main"].runtimeClasspath
 }
 
+// 4주차 Thread pool vs Coroutine 벤치마크:  ./gradlew concurrencyBenchmark
+tasks.register<JavaExec>("concurrencyBenchmark") {
+    group = "application"
+    description = "스레드풀 vs 코루틴 경량성 비교(처리량/스레드/힙)"
+    mainClass.set("_2026_07.benchmark.ConcurrencyBenchmarkKt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+// 4주차 graceful shutdown 데모(SIGTERM/Ctrl-C):  ./gradlew gracefulDemo
+tasks.register<JavaExec>("gracefulDemo") {
+    group = "application"
+    description = "graceful shutdown 데모 (Ctrl-C 로 종료)"
+    mainClass.set("_2026_07.demo.GracefulShutdownDemoKt")
+    classpath = sourceSets["main"].runtimeClasspath
+    standardInput = System.`in`
+}
+
 tasks.register("prepareKotlinBuildScriptModel") {}

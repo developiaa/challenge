@@ -3,7 +3,7 @@ package _2026_07.config
 import _2026_07.pipeline.AlertSink
 import _2026_07.pipeline.EventProcessor
 import _2026_07.pipeline.Pipeline
-import _2026_07.pipeline.alerting.LoggingAlertSink
+import _2026_07.pipeline.alerting.SimulatedBrokerAlertSink
 import _2026_07.pipeline.ingestion.SelectingIngestion
 import _2026_07.pipeline.processing.AnomalyDetectingProcessor
 import _2026_07.pipeline.source.MockEventSource
@@ -20,8 +20,9 @@ class PipelineConfiguration {
     @Bean
     fun eventProcessor(): EventProcessor = AnomalyDetectingProcessor(threshold = 70.0)
 
+    // 4주차: 발행 지연을 흉내내는 브로커 시뮬레이션 싱크(실 Kafka 는 이 인터페이스 구현으로 교체).
     @Bean
-    fun alertSink(): AlertSink = LoggingAlertSink()
+    fun alertSink(): AlertSink = SimulatedBrokerAlertSink(publishLatencyMillis = 5)
 
     /**
      * 소스 목록은 파이프라인 빈 내부에서 직접 구성한다.
