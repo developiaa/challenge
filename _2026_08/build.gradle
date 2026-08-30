@@ -19,6 +19,20 @@ repositories {
 }
 
 dependencies {
+    // 1. Lombok 의존성 및 프로세서 (가장 먼저 실행되어야 함)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // 2. Lombok - MapStruct 바인딩 (이것이 핵심!)
+    // Lombok이 생성한 코드를 MapStruct가 인식할 수 있게 연결해 줍니다.
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
+    //스프링 부트를 사용 중이라면 Lombok 버전은 Spring Boot의 Dependency Management가 관리해주므로 버전을 명시하지 않아도 됨
+
+    // 3. MapStruct 의존성 및 프로세서
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
